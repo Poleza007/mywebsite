@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>КРОМКА. Барбершоп в центре Москвы</title>
+  <meta name="description" content="КРОМКА. Барбершоп в центре Москвы. Классические мужские стрижки, бритьё опасной бритвой и уход за бородой. Запись онлайн." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="КРОМКА. Барбершоп в центре Москвы" />
+  <meta property="og:description" content="Классические мужские стрижки, бритьё опасной бритвой и уход за бородой. Запись онлайн." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Favicon (inline SVG, золотая «K») -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230E0D0B'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23C8A15A' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="КРОМКА, на главную">
+        <span class="logo__mark">K</span>
+        <span class="logo__text">КРОМКА</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#team" class="nav__link">Барберы</a>
+        <a href="#gallery" class="nav__link">Работы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#location" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+        <a href="#booking" class="btn btn--accent btn--sm">Записаться</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+      <a href="#services" class="mobile-menu__link">Услуги</a>
+      <a href="#team" class="mobile-menu__link">Барберы</a>
+      <a href="#gallery" class="mobile-menu__link">Работы</a>
+      <a href="#reviews" class="mobile-menu__link">Отзывы</a>
+      <a href="#location" class="mobile-menu__link">Контакты</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="tel:+74951234567" class="mobile-menu__phone">+7 (495) 123-45-67</a>
+      <a href="#booking" class="btn btn--accent">Записаться онлайн</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow">Барбершоп в центре Москвы · с 2014 года</p>
+          <h1 class="hero__title">Стрижка,<br />которая держит форму</h1>
+          <p class="hero__lead">Классические мужские стрижки, бритьё опасной бритвой и уход за бородой. Мастера с опытом от шести лет.</p>
+          <div class="hero__actions">
+            <a href="#booking" class="btn btn--accent">Записаться онлайн</a>
+            <a href="#services" class="btn btn--ghost">Услуги и цены</a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <!-- Стоковое фото Pexels. Заменить на реальные фото барбершопа перед сдачей клиенту. -->
+          <img
+            src="https://images.pexels.com/photos/2775269/pexels-photo-2775269.jpeg?auto=compress&cs=tinysrgb&w=900&h=1120&fit=crop"
+            alt="Барбер за работой в барбершопе КРОМКА"
+            width="900" height="1120" loading="eager" />
+          <div class="hero__badge">
+            <span class="hero__badge-num">4,9</span>
+            <span class="hero__badge-text">рейтинг на<br />Яндекс.Картах</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRUST STRIP ==================== -->
+    <section class="stats" aria-label="Показатели барбершопа">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="11" data-suffix="">0</span>
+          <span class="stat__label">лет на рынке</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="180" data-suffix="&nbsp;000+">0</span>
+          <span class="stat__label">стрижек сделано</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="16" data-suffix="">0</span>
+          <span class="stat__label">барберов в команде</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="83" data-suffix="%">0</span>
+          <span class="stat__label">гостей возвращаются</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Услуги и цены</h2>
+          <p class="section__sub">Итоговая цена зависит от уровня барбера: барбер, старший, топ. Точную стоимость подскажем при записи.</p>
+        </div>
+
+        <!-- Услуги рендерятся из data/prices.js (или из Google-таблицы, если задан её ID в script.js) -->
+        <div class="services__list" id="services-list" aria-live="polite">
+          <p class="services__loading">Загружаем услуги…</p>
+        </div>
+
+        <div class="services__cta reveal">
+          <a href="#booking" class="btn btn--accent">Записаться на услугу</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PHILOSOPHY ==================== -->
+    <section class="philosophy section" id="about">
+      <div class="container philosophy__grid">
+        <div class="philosophy__media reveal">
+          <!-- Стоковое фото Pexels. Заменить на реальное фото интерьера. -->
+          <img
+            src="https://images.pexels.com/photos/785537/pexels-photo-785537.jpeg?auto=compress&cs=tinysrgb&w=820&h=960&fit=crop"
+            alt="Интерьер барбершопа КРОМКА" width="820" height="960" loading="lazy" />
+        </div>
+        <div class="philosophy__content reveal">
+          <p class="section__eyebrow">О нас</p>
+          <h2 class="philosophy__title">Стрижём коротко. Работаем вдолгую.</h2>
+          <p class="philosophy__text">КРОМКА открылась в 2014 году с простой идеей: мужчина должен выходить отсюда с чувством, что всё под контролем. Никакой суеты, только точная работа, крепкий кофе и разговор по делу.</p>
+          <p class="philosophy__text">Каждый барбер проходит нашу внутреннюю академию и подтверждает уровень на практике. Мы не гонимся за потоком, поэтому берём ровно столько гостей, скольким можем уделить время.</p>
+          <ul class="philosophy__points">
+            <li>Работаем только по записи, без очередей</li>
+            <li>Своя академия и аттестация мастеров</li>
+            <li>Стерилизация инструмента после каждого гостя</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TEAM ==================== -->
+    <section class="team section" id="team">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Наши барберы</h2>
+          <p class="section__sub">Средний опыт команды девять лет. У каждого своя специализация, выбирайте под свою задачу.</p>
+        </div>
+
+        <div class="team__grid">
+          <article class="master reveal">
+            <div class="master__photo">
+              <!-- Стоковые фото Pexels. Заменить на реальные портреты барберов. -->
+              <img src="https://images.pexels.com/photos/897263/pexels-photo-897263.jpeg?auto=compress&cs=tinysrgb&w=600&h=720&fit=crop" alt="Барбер Артём Соколов" width="600" height="720" loading="lazy" />
+              <span class="master__level">Топ-барбер</span>
+            </div>
+            <h3 class="master__name">Артём Соколов</h3>
+            <p class="master__role">Классические стрижки, 11 лет опыта</p>
+          </article>
+
+          <article class="master reveal">
+            <div class="master__photo">
+              <img src="https://images.pexels.com/photos/7447146/pexels-photo-7447146.jpeg?auto=compress&cs=tinysrgb&w=600&h=720&fit=crop" alt="Барбер Марат Хайруллин" width="600" height="720" loading="lazy" />
+              <span class="master__level">Старший барбер</span>
+            </div>
+            <h3 class="master__name">Марат Хайруллин</h3>
+            <p class="master__role">Фейды и текстурные стрижки, 8 лет</p>
+          </article>
+
+          <article class="master reveal">
+            <div class="master__photo">
+              <img src="https://images.pexels.com/photos/7697231/pexels-photo-7697231.jpeg?auto=compress&cs=tinysrgb&w=600&h=720&fit=crop" alt="Барбер Георгий Осипов" width="600" height="720" loading="lazy" />
+              <span class="master__level">Топ-барбер</span>
+            </div>
+            <h3 class="master__name">Георгий Осипов</h3>
+            <p class="master__role">Бритьё опасной бритвой, 13 лет</p>
+          </article>
+
+          <article class="master reveal">
+            <div class="master__photo">
+              <img src="https://images.pexels.com/photos/11169551/pexels-photo-11169551.jpeg?auto=compress&cs=tinysrgb&w=600&h=720&fit=crop" alt="Барбер Даниил Ковач" width="600" height="720" loading="lazy" />
+              <span class="master__level">Барбер</span>
+            </div>
+            <h3 class="master__name">Даниил Ковач</h3>
+            <p class="master__role">Уход за бородой, 6 лет</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Наши работы</h2>
+          <p class="section__sub">Фрагмент лукбука за последние месяцы. Полную подборку показываем в Telegram.</p>
+        </div>
+
+        <div class="gallery__grid">
+          <!-- Стоковые фото Pexels. Заменить на реальный лукбук барбершопа. -->
+          <figure class="gallery__item gallery__item--tall reveal">
+            <img src="https://images.pexels.com/photos/33461079/pexels-photo-33461079.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop" alt="Стрижка машинкой, работа барбера" width="700" height="900" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal">
+            <img src="https://images.pexels.com/photos/7447150/pexels-photo-7447150.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Стрижка ножницами" width="700" height="560" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal">
+            <img src="https://images.pexels.com/photos/30807432/pexels-photo-30807432.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Инструмент барбера, ножницы" width="700" height="560" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal">
+            <img src="https://images.pexels.com/photos/2014809/pexels-photo-2014809.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Бритьё контура опасной бритвой" width="700" height="560" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--wide reveal">
+            <img src="https://images.pexels.com/photos/36361320/pexels-photo-36361320.jpeg?auto=compress&cs=tinysrgb&w=1120&h=560&fit=crop" alt="Ножницы и расчёска барбера" width="1120" height="560" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section class="why section" id="why">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Почему к нам возвращаются</h2>
+        </div>
+
+        <div class="why__grid">
+          <article class="why__item reveal">
+            <span class="why__index">01</span>
+            <h3 class="why__title">Гарантия на стрижку</h3>
+            <p class="why__text">Что-то отросло не так или хочется поправить? Бесплатная коррекция в течение трёх дней после визита.</p>
+          </article>
+          <article class="why__item reveal">
+            <span class="why__index">02</span>
+            <h3 class="why__title">Стерильный инструмент</h3>
+            <p class="why__text">Машинки, ножницы и бритвы проходят дезинфекцию после каждого гостя. Одноразовые лезвия при бритье.</p>
+          </article>
+          <article class="why__item reveal">
+            <span class="why__index">03</span>
+            <h3 class="why__title">Своя академия</h3>
+            <p class="why__text">Мастера учатся и аттестуются внутри КРОМКИ. К гостю выходит только барбер, подтвердивший уровень.</p>
+          </article>
+          <article class="why__item reveal">
+            <span class="why__index">04</span>
+            <h3 class="why__title">Без спешки</h3>
+            <p class="why__text">Работаем по записи и закладываем время с запасом. Вас не будут торопить ради следующего гостя.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REVIEWS ==================== -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="reviews__head reveal">
+          <div>
+            <h2 class="section__title">Что говорят гости</h2>
+          </div>
+          <div class="reviews__rating">
+            <span class="reviews__rating-num">4,9</span>
+            <div class="reviews__rating-meta">
+              <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews__rating-src">1 240 отзывов на Яндекс.Картах</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__grid">
+          <blockquote class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <p class="review__text">Хожу к Артёму второй год. Всегда попадает в форму головы, объясняет как укладывать дома. Из барбершопа выходишь другим человеком.</p>
+            <footer class="review__author">
+              <strong>Илья Верещагин</strong>
+              <span>гость с 2022 года</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <p class="review__text">Пришёл на королевское бритьё перед свадьбой. Горячее полотенце, аккуратная работа, ноль порезов. Теперь только сюда.</p>
+            <footer class="review__author">
+              <strong>Дмитрий Крылов</strong>
+              <span>Google, отзыв</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <p class="review__text">Записался в первый раз через сайт, всё заняло минуту. Мастер уточнил детали заранее. Приятно, когда всё по-человечески.</p>
+            <footer class="review__author">
+              <strong>Сергей Лапин</strong>
+              <span>Яндекс.Карты</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOCATION ==================== -->
+    <section class="location section" id="location">
+      <div class="container location__grid">
+        <div class="location__info reveal">
+          <p class="section__eyebrow">Как нас найти</p>
+          <h2 class="location__title">В двух минутах от метро Чистые пруды</h2>
+
+          <dl class="location__list">
+            <div class="location__row">
+              <dt>Адрес</dt>
+              <dd>Москва, Чистопрудный бульвар, 12, стр. 1</dd>
+            </div>
+            <div class="location__row">
+              <dt>Метро</dt>
+              <dd>Чистые пруды, Тургеневская</dd>
+            </div>
+            <div class="location__row">
+              <dt>Часы работы</dt>
+              <dd>Ежедневно с 10:00 до 22:00</dd>
+            </div>
+            <div class="location__row">
+              <dt>Телефон</dt>
+              <dd><a href="tel:+74951234567">+7 (495) 123-45-67</a></dd>
+            </div>
+          </dl>
+
+          <div class="location__actions">
+            <a href="https://yandex.ru/maps" target="_blank" rel="noopener" class="btn btn--ghost">Открыть в Яндекс.Картах</a>
+            <a href="#booking" class="btn btn--accent">Записаться</a>
+          </div>
+        </div>
+
+        <div class="location__map reveal">
+          <!-- Стоковое фото Pexels. Заменить на встроенную карту Яндекс.Карт или фото фасада. -->
+          <img src="https://images.pexels.com/photos/4947554/pexels-photo-4947554.jpeg?auto=compress&cs=tinysrgb&w=820&h=640&fit=crop" alt="Фасад барбершопа КРОМКА" width="820" height="640" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq section" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__head reveal">
+          <h2 class="section__title">Частые вопросы</h2>
+          <p class="section__sub">Не нашли ответ? Напишите нам в Telegram, отвечаем быстро.</p>
+        </div>
+
+        <div class="faq__list reveal">
+          <details class="faq__item">
+            <summary class="faq__q">Нужно ли записываться заранее?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Да, мы работаем только по записи, чтобы не было очередей. Записаться можно на сайте или по телефону, обычно есть слоты на ближайшие дни.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Сколько стоит стрижка?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Мужская стрижка начинается от 1 900 ₽. Итоговая цена зависит от уровня барбера и услуги. Полный прайс есть в разделе «Услуги и цены».</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Могу ли я выбрать конкретного барбера?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Конечно. При записи укажите мастера, к которому хотите попасть. Если он занят, подскажем ближайшее свободное время или предложим коллегу схожей специализации.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Что если стрижка не понравится?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>В течение трёх дней после визита мы бесплатно поправим форму. Просто напишите или позвоните нам, договоримся об удобном времени.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Есть ли парковка рядом?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Рядом городская платная парковка вдоль Чистопрудного бульвара. Проще всего добраться на метро, мы в двух минутах от станции Чистые пруды.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Делаете ли вы детские стрижки?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Да, стрижём мальчиков от 6 лет. Есть услуга «Отец и сын» со специальной ценой на детскую стрижку в рамках одного визита.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOOKING / CTA ==================== -->
+    <section class="booking section" id="booking">
+      <div class="container booking__grid">
+        <div class="booking__intro reveal">
+          <h2 class="booking__title">Запишитесь<br />на визит</h2>
+          <p class="booking__lead">Оставьте заявку, и мы перезвоним в течение 15 минут, чтобы подтвердить удобное время и мастера.</p>
+          <ul class="booking__perks">
+            <li>Подтверждение в течение 15 минут</li>
+            <li>Напоминание за день до визита</li>
+            <li>Бесплатная коррекция три дня</li>
+          </ul>
+        </div>
+
+        <form class="booking__form reveal" id="booking-form" novalidate>
+          <div class="field">
+            <label for="name" class="field__label">Как вас зовут</label>
+            <input type="text" id="name" name="name" class="field__input" placeholder="Например, Артём" autocomplete="name" required />
+            <span class="field__error" data-error-for="name"></span>
+          </div>
+
+          <div class="field">
+            <label for="phone" class="field__label">Телефон</label>
+            <input type="tel" id="phone" name="phone" class="field__input" placeholder="+7 (___) ___-__-__" autocomplete="tel" required />
+            <span class="field__error" data-error-for="phone"></span>
+          </div>
+
+          <div class="field">
+            <label for="service" class="field__label">Услуга</label>
+            <select id="service" name="service" class="field__input">
+              <option value="Мужская стрижка">Мужская стрижка</option>
+              <option value="Стрижка и борода">Стрижка и борода</option>
+              <option value="Королевское бритьё">Королевское бритьё</option>
+              <option value="Моделирование бороды">Моделирование бороды</option>
+              <option value="Камуфляж седины">Камуфляж седины</option>
+              <option value="Отец и сын">Отец и сын</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="comment" class="field__label">Комментарий <span class="field__opt">не обязательно</span></label>
+            <input type="text" id="comment" name="comment" class="field__input" placeholder="Желаемый мастер или время" />
+          </div>
+
+          <button type="submit" class="btn btn--accent btn--block">Отправить заявку</button>
+          <p class="booking__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+
+          <div class="booking__success" id="booking-success" hidden>
+            <strong>Заявка принята.</strong>
+            <span>Мы перезвоним в течение 15 минут, чтобы подтвердить запись.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#hero" class="logo logo--footer">
+          <span class="logo__mark">K</span>
+          <span class="logo__text">КРОМКА</span>
+        </a>
+        <p class="footer__tagline">Барбершоп в центре Москвы. Классические мужские стрижки с 2014 года.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Разделы сайта">
+        <h3 class="footer__heading">Разделы</h3>
+        <a href="#services" class="footer__link">Услуги и цены</a>
+        <a href="#team" class="footer__link">Барберы</a>
+        <a href="#gallery" class="footer__link">Работы</a>
+        <a href="#reviews" class="footer__link">Отзывы</a>
+      </nav>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Контакты</h3>
+        <a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a>
+        <a href="mailto:hello@kromka-barber.ru" class="footer__link">hello@kromka-barber.ru</a>
+        <span class="footer__link footer__link--static">Чистопрудный бул., 12, стр. 1</span>
+        <span class="footer__link footer__link--static">Ежедневно с 10:00 до 22:00</span>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Мы на связи</h3>
+        <a href="https://t.me" target="_blank" rel="noopener" class="footer__link">Telegram</a>
+        <a href="https://wa.me/74951234567" target="_blank" rel="noopener" class="footer__link">WhatsApp</a>
+        <a href="https://vk.com" target="_blank" rel="noopener" class="footer__link">ВКонтакте</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© 2026 Барбершоп КРОМКА. Демо-проект для портфолио.</span>
+      <span>Дизайн и разработка сайта</span>
+    </div>
+  </footer>
+
+  <script src="data/prices.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

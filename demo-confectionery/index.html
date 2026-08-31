@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вензель. Торты на заказ в Москве</title>
+  <meta name="description" content="Кондитерская Вензель. Авторские торты ручной работы для важных поводов. Натуральные ингредиенты, доставка по Москве в холодильном транспорте." />
+
+  <meta property="og:title" content="Вензель. Торты на заказ в Москве" />
+  <meta property="og:description" content="Авторские торты ручной работы для важных поводов. Натуральные ингредиенты, бережная доставка по Москве." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Favicon (монограмма «В» в круге) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23fbf8f4' stroke='%23b4344f' stroke-width='1.5'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-style='italic' fill='%23b4344f' text-anchor='middle'%3E%D0%92%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Вензель, на главную">
+        <span class="logo__mark">В</span>
+        <span class="logo__text">Вензель</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#catalog" class="nav__link">Каталог</a>
+        <a href="#fillings" class="nav__link">Начинки</a>
+        <a href="#how" class="nav__link">Как заказать</a>
+        <a href="#gallery" class="nav__link">Работы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+        <a href="#order" class="btn btn--accent btn--sm">Заказать торт</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+      <a href="#catalog" class="mobile-menu__link">Каталог</a>
+      <a href="#fillings" class="mobile-menu__link">Начинки</a>
+      <a href="#how" class="mobile-menu__link">Как заказать</a>
+      <a href="#gallery" class="mobile-menu__link">Работы</a>
+      <a href="#reviews" class="mobile-menu__link">Отзывы</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="tel:+74951234567" class="mobile-menu__phone">+7 (495) 123-45-67</a>
+      <a href="#order" class="btn btn--accent">Заказать торт</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow">Кондитерская в Москве · с 2015 года</p>
+          <h1 class="hero__title">Торты ручной работы для важных поводов</h1>
+          <p class="hero__lead">Собираем вкус и дизайн под ваш праздник. Натуральные ингредиенты, бережная доставка по Москве в холодильном транспорте.</p>
+          <div class="hero__actions">
+            <a href="#order" class="btn btn--accent">Заказать торт</a>
+            <a href="#catalog" class="btn btn--ghost">Смотреть каталог</a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal">
+          <!-- Стоковое фото Pexels. Заменить на реальные фото тортов кондитерской. -->
+          <img
+            src="https://images.pexels.com/photos/11883323/pexels-photo-11883323.jpeg?auto=compress&cs=tinysrgb&w=900&h=1040&fit=crop"
+            alt="Авторский торт с ягодами от кондитерской Вензель"
+            width="900" height="1040" loading="eager" />
+          <div class="hero__badge">
+            <span class="hero__badge-num">4,9</span>
+            <span class="hero__badge-text">рейтинг на<br />Яндекс.Картах</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRUST STRIP ==================== -->
+    <section class="stats" aria-label="Показатели кондитерской">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="10" data-suffix="">0</span>
+          <span class="stat__label">лет создаём торты</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="12" data-suffix="&nbsp;000+">0</span>
+          <span class="stat__label">тортов приготовили</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="30" data-suffix="+">0</span>
+          <span class="stat__label">вкусов начинок</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="100" data-suffix="%">0</span>
+          <span class="stat__label">натуральные составы</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CATALOG ==================== -->
+    <section class="catalog section" id="catalog">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Витрина</p>
+          <h2 class="section__title">Выберите свой торт</h2>
+          <p class="section__sub">Любую модель адаптируем под ваш вкус, вес и повод. Цена зависит от сложности декора, точную стоимость посчитаем при заказе.</p>
+        </div>
+
+        <div class="catalog__grid">
+          <article class="cake reveal">
+            <div class="cake__photo">
+              <img src="https://images.pexels.com/photos/19651273/pexels-photo-19651273.jpeg?auto=compress&cs=tinysrgb&w=680&h=560&fit=crop" alt="Бисквитный торт с ягодами" width="680" height="560" loading="lazy" />
+              <span class="cake__tag">Хит</span>
+            </div>
+            <div class="cake__body">
+              <h3 class="cake__name">Бисквитный с ягодами</h3>
+              <p class="cake__desc">Нежные коржи, крем на сливках и сезонные ягоды.</p>
+              <span class="cake__price">от 2 400 ₽/кг</span>
+            </div>
+          </article>
+
+          <article class="cake reveal">
+            <div class="cake__photo">
+              <img src="https://images.pexels.com/photos/12927170/pexels-photo-12927170.jpeg?auto=compress&cs=tinysrgb&w=680&h=560&fit=crop" alt="Муссовый торт с зеркальной глазурью" width="680" height="560" loading="lazy" />
+              <span class="cake__tag">Авторский</span>
+            </div>
+            <div class="cake__body">
+              <h3 class="cake__name">Муссовый «зеркальный»</h3>
+              <p class="cake__desc">Воздушный мусс под глянцевой зеркальной глазурью.</p>
+              <span class="cake__price">от 3 200 ₽/кг</span>
+            </div>
+          </article>
+
+          <article class="cake reveal">
+            <div class="cake__photo">
+              <img src="https://images.pexels.com/photos/31266998/pexels-photo-31266998.jpeg?auto=compress&cs=tinysrgb&w=680&h=560&fit=crop" alt="Свадебный многоярусный торт" width="680" height="560" loading="lazy" />
+              <span class="cake__tag">Свадьба</span>
+            </div>
+            <div class="cake__body">
+              <h3 class="cake__name">Свадебный многоярусный</h3>
+              <p class="cake__desc">Классика для торжества, от двух до пяти ярусов.</p>
+              <span class="cake__price">от 4 500 ₽/кг</span>
+            </div>
+          </article>
+
+          <article class="cake reveal">
+            <div class="cake__photo">
+              <img src="https://images.pexels.com/photos/5610333/pexels-photo-5610333.jpeg?auto=compress&cs=tinysrgb&w=680&h=560&fit=crop" alt="Детский торт с декором" width="680" height="560" loading="lazy" />
+              <span class="cake__tag">Детский</span>
+            </div>
+            <div class="cake__body">
+              <h3 class="cake__name">Детский с декором</h3>
+              <p class="cake__desc">Яркий торт с любимыми героями и фигурками.</p>
+              <span class="cake__price">от 3 000 ₽/кг</span>
+            </div>
+          </article>
+
+          <article class="cake reveal">
+            <div class="cake__photo">
+              <img src="https://images.pexels.com/photos/28487967/pexels-photo-28487967.jpeg?auto=compress&cs=tinysrgb&w=680&h=560&fit=crop" alt="Праздничный классический торт" width="680" height="560" loading="lazy" />
+              <span class="cake__tag">Минимализм</span>
+            </div>
+            <div class="cake__body">
+              <h3 class="cake__name">Праздничный классический</h3>
+              <p class="cake__desc">Сдержанный дизайн для тех, кто ценит вкус, а не пышность.</p>
+              <span class="cake__price">от 2 600 ₽/кг</span>
+            </div>
+          </article>
+
+          <article class="cake reveal">
+            <div class="cake__photo">
+              <img src="https://images.pexels.com/photos/34008843/pexels-photo-34008843.jpeg?auto=compress&cs=tinysrgb&w=680&h=560&fit=crop" alt="Капкейки и десерты" width="680" height="560" loading="lazy" />
+              <span class="cake__tag">Десерты</span>
+            </div>
+            <div class="cake__body">
+              <h3 class="cake__name">Капкейки и десерты</h3>
+              <p class="cake__desc">Наборы капкейков, эклеров и пирожных к столу.</p>
+              <span class="cake__price">от 1 500 ₽/набор</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="catalog__cta reveal">
+          <a href="#order" class="btn btn--accent">Обсудить свой торт</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FILLINGS ==================== -->
+    <section class="fillings section" id="fillings">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Выберите начинку</h2>
+          <p class="section__sub">Более тридцати вкусов на любой праздник. Вот те, что заказывают чаще всего.</p>
+        </div>
+
+        <div class="fillings__grid">
+          <div class="filling reveal"><h3>Ваниль и клубника</h3><p>Ванильный бисквит, сливочный крем, свежая клубника.</p></div>
+          <div class="filling reveal"><h3>Шоколад и вишня</h3><p>Шоколадные коржи с вишнёвым конфитюром.</p></div>
+          <div class="filling reveal"><h3>Солёная карамель</h3><p>Медовые коржи, крем-брюле и солёная карамель.</p></div>
+          <div class="filling reveal"><h3>Красный бархат</h3><p>Бархатный бисквит и крем на сливочном сыре.</p></div>
+          <div class="filling reveal"><h3>Фисташка и малина</h3><p>Фисташковый крем и малиновая прослойка.</p></div>
+          <div class="filling reveal"><h3>Три шоколада</h3><p>Мусс из белого, молочного и тёмного шоколада.</p></div>
+          <div class="filling reveal"><h3>Манго и маракуйя</h3><p>Тропический мусс с ярким кисло-сладким вкусом.</p></div>
+          <div class="filling reveal"><h3>Сметанный классический</h3><p>Тот самый домашний вкус из детства.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOW TO ORDER ==================== -->
+    <section class="how section" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Как заказать торт</h2>
+          <p class="section__sub">Четыре шага от идеи до праздничного стола. Заявки принимаем минимум за три дня.</p>
+        </div>
+
+        <div class="how__grid">
+          <article class="step reveal">
+            <span class="step__num">1</span>
+            <h3 class="step__title">Заявка</h3>
+            <p class="step__text">Оставьте заявку с поводом, датой и пожеланиями к торту.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">2</span>
+            <h3 class="step__title">Согласование</h3>
+            <p class="step__text">Подберём вкус, дизайн, вес и назовём точную стоимость.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">3</span>
+            <h3 class="step__title">Готовим</h3>
+            <p class="step__text">Печём за три дня из свежих продуктов, без полуфабрикатов.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">4</span>
+            <h3 class="step__title">Доставка</h3>
+            <p class="step__text">Привозим в холодильном транспорте точно ко времени.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <!-- Стоковое фото Pexels. Заменить на реальное фото кондитера за работой. -->
+          <img src="https://images.pexels.com/photos/37888518/pexels-photo-37888518.jpeg?auto=compress&cs=tinysrgb&w=760&h=900&fit=crop" alt="Кондитер за работой в кондитерской Вензель" width="760" height="900" loading="lazy" />
+        </div>
+        <div class="about__content reveal">
+          <p class="section__eyebrow">О нас</p>
+          <h2 class="about__title">Каждый торт собираем вручную</h2>
+          <p class="about__text">Вензель начинался как домашняя кондитерская Полины Астаховой. За десять лет мы выросли в мастерскую, но принцип остался прежним: каждый торт делаем руками и под конкретный праздник, а не с полки.</p>
+          <p class="about__text">Мы работаем на свежих сливках, натуральном шоколаде и сезонных ягодах. Красители используем только безопасные, а составы честно показываем перед заказом.</p>
+          <blockquote class="about__quote">
+            «Хороший торт помнят дольше, чем повод, ради которого его заказали.»
+            <cite>Полина Астахова, шеф-кондитер</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Наши работы</h2>
+          <p class="section__sub">Часть тортов, которые мы приготовили за последние месяцы. Полная подборка в Telegram.</p>
+        </div>
+
+        <div class="gallery__grid">
+          <!-- Стоковые фото Pexels. Заменить на реальный портфолио тортов. -->
+          <figure class="gallery__item gallery__item--tall reveal">
+            <img src="https://images.pexels.com/photos/29388914/pexels-photo-29388914.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop" alt="Свадебный торт с цветами" width="700" height="900" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal">
+            <img src="https://images.pexels.com/photos/5859948/pexels-photo-5859948.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Пирожные с ягодами" width="700" height="560" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal">
+            <img src="https://images.pexels.com/photos/8556164/pexels-photo-8556164.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Кусок слоёного торта" width="700" height="560" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal">
+            <img src="https://images.pexels.com/photos/2337772/pexels-photo-2337772.jpeg?auto=compress&cs=tinysrgb&w=700&h=560&fit=crop" alt="Детский тематический торт" width="700" height="560" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--wide reveal">
+            <img src="https://images.pexels.com/photos/14714031/pexels-photo-14714031.jpeg?auto=compress&cs=tinysrgb&w=1120&h=560&fit=crop" alt="Стол с десертами и тортом" width="1120" height="560" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REVIEWS ==================== -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="reviews__head reveal">
+          <h2 class="section__title">Отзывы гостей</h2>
+          <div class="reviews__rating">
+            <span class="reviews__rating-num">4,9</span>
+            <div class="reviews__rating-meta">
+              <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+              <span class="reviews__rating-src">980 отзывов на Яндекс.Картах</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__grid">
+          <blockquote class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <p class="review__text">Заказывали торт на годовщину. Собрали ровно то, что я описала на словах, а вкус превзошёл ожидания. Гости требовали контакты.</p>
+            <footer class="review__author">
+              <strong>Екатерина Мельник</strong>
+              <span>Яндекс.Карты</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <p class="review__text">Детский торт с фигурками сына привёл в восторг всю группу в саду. Доставили вовремя, всё было холодным и свежим.</p>
+            <footer class="review__author">
+              <strong>Ольга Трофимова</strong>
+              <span>гостья с 2023 года</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <p class="review__text">Брал муссовый торт на корпоратив. Помогли с выбором начинки, посчитали цену сразу. Отдельное спасибо за честный состав.</p>
+            <footer class="review__author">
+              <strong>Артём Довженко</strong>
+              <span>Google, отзыв</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DELIVERY ==================== -->
+    <section class="delivery section" id="delivery">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Доставка и оплата</h2>
+        </div>
+        <div class="delivery__grid">
+          <div class="delivery__item reveal">
+            <h3 class="delivery__title">Холодильный транспорт</h3>
+            <p class="delivery__text">Возим торты в машинах с холодильником, чтобы декор и крем доехали в идеальном виде.</p>
+          </div>
+          <div class="delivery__item reveal">
+            <h3 class="delivery__title">По Москве и области</h3>
+            <p class="delivery__text">Доставляем по городу и в ближнее Подмосковье. Стоимость зависит от района, скажем при оформлении.</p>
+          </div>
+          <div class="delivery__item reveal">
+            <h3 class="delivery__title">Точно ко времени</h3>
+            <p class="delivery__text">Согласуем интервал и привезём торт к нужному часу. Предупредим курьера за 30 минут.</p>
+          </div>
+          <div class="delivery__item reveal">
+            <h3 class="delivery__title">Удобная оплата</h3>
+            <p class="delivery__text">Картой онлайн, переводом или наличными курьеру. Для компаний работаем по счёту.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq section" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__head reveal">
+          <h2 class="section__title">Частые вопросы</h2>
+          <p class="section__sub">Не нашли ответ? Напишите нам в Telegram, поможем с выбором.</p>
+        </div>
+
+        <div class="faq__list reveal">
+          <details class="faq__item">
+            <summary class="faq__q">За сколько дней нужно заказывать?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Обычно за три дня. Сложные свадебные и многоярусные торты лучше обсудить за одну-две недели. На срочный заказ тоже можем взяться, если есть свободные слоты.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Можно ли торт по моей картинке?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Да. Пришлите фото или опишите идею, мы предложим, как это повторить, и покажем эскиз перед изготовлением.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Из чего вы готовите?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Свежие сливки, натуральный шоколад, сезонные ягоды и фрукты. Красители используем только пищевые и безопасные. Полный состав покажем перед заказом.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Как рассчитать вес торта?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Ориентируйтесь на 150-200 грамм на гостя. При заявке подскажем точный вес под количество человек и формат праздника.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Можно ли изменить заказ после согласования?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Правки по декору и вкусу принимаем до двух дней до готовности. Дату доставки можно перенести, если предупредить заранее.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Делаете ли вы капкейки и десерты к торту?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Да, собираем наборы капкейков, эклеров, макарон и пирожных в едином стиле с тортом. Удобно для большого стола.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ORDER ==================== -->
+    <section class="order section" id="order">
+      <div class="container order__grid">
+        <div class="order__intro reveal">
+          <h2 class="order__title">Оставьте заявку на торт</h2>
+          <p class="order__lead">Мы перезвоним в течение 15 минут, поможем с выбором вкуса и дизайна и посчитаем стоимость.</p>
+          <ul class="order__perks">
+            <li>Ответим и посчитаем цену в день обращения</li>
+            <li>Покажем эскиз перед изготовлением</li>
+            <li>Честный состав без скрытых добавок</li>
+          </ul>
+        </div>
+
+        <form class="order__form reveal" id="order-form" novalidate>
+          <div class="field">
+            <label for="name" class="field__label">Как вас зовут</label>
+            <input type="text" id="name" name="name" class="field__input" placeholder="Например, Полина" autocomplete="name" required />
+            <span class="field__error" data-error-for="name"></span>
+          </div>
+
+          <div class="field">
+            <label for="phone" class="field__label">Телефон</label>
+            <input type="tel" id="phone" name="phone" class="field__input" placeholder="+7 (___) ___-__-__" autocomplete="tel" required />
+            <span class="field__error" data-error-for="phone"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="occasion" class="field__label">Повод</label>
+              <select id="occasion" name="occasion" class="field__input">
+                <option value="День рождения">День рождения</option>
+                <option value="Свадьба">Свадьба</option>
+                <option value="Детский праздник">Детский праздник</option>
+                <option value="Корпоратив">Корпоратив</option>
+                <option value="Другое">Другое</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date" class="field__label">Дата праздника</label>
+              <input type="date" id="date" name="date" class="field__input" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="comment" class="field__label">Пожелания <span class="field__opt">не обязательно</span></label>
+            <input type="text" id="comment" name="comment" class="field__input" placeholder="Вкус, цвет, количество гостей" />
+          </div>
+
+          <button type="submit" class="btn btn--accent btn--block">Отправить заявку</button>
+          <p class="order__note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+
+          <div class="order__success" id="order-success" hidden>
+            <strong>Заявка принята.</strong>
+            <span>Мы перезвоним в течение 15 минут и поможем с выбором торта.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#hero" class="logo logo--footer">
+          <span class="logo__mark">В</span>
+          <span class="logo__text">Вензель</span>
+        </a>
+        <p class="footer__tagline">Кондитерская в Москве. Авторские торты ручной работы с 2015 года.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Разделы сайта">
+        <h3 class="footer__heading">Разделы</h3>
+        <a href="#catalog" class="footer__link">Каталог</a>
+        <a href="#fillings" class="footer__link">Начинки</a>
+        <a href="#how" class="footer__link">Как заказать</a>
+        <a href="#gallery" class="footer__link">Работы</a>
+      </nav>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Контакты</h3>
+        <a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a>
+        <a href="mailto:hello@venzel-cake.ru" class="footer__link">hello@venzel-cake.ru</a>
+        <span class="footer__link footer__link--static">Москва, ул. Пятницкая, 25</span>
+        <span class="footer__link footer__link--static">Ежедневно с 9:00 до 21:00</span>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Мы на связи</h3>
+        <a href="https://t.me" target="_blank" rel="noopener" class="footer__link">Telegram</a>
+        <a href="https://wa.me/74951234567" target="_blank" rel="noopener" class="footer__link">WhatsApp</a>
+        <a href="https://vk.com" target="_blank" rel="noopener" class="footer__link">ВКонтакте</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© 2026 Кондитерская Вензель. Демо-проект для портфолио.</span>
+      <span>Дизайн и разработка сайта</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
