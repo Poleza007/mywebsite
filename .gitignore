@@ -5,3 +5,11 @@ desktop.ini
 
 # Внутренние рабочие материалы, не часть публичного сайта
 /Анализ конкурентов/
+/demo-ceilings/analiz-konkurentov.html
+/demo-signage/analiz-konkurentov.md
+
+# Локальные настройки редактора
+/.claude/
+
+# Референсы для вдохновения (чужие мокапы), не часть сайта
+/images/

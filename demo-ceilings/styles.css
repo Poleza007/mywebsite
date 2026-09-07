@@ -1,0 +1,800 @@
+/* ============================================================
+   РОВНО — студия натяжных потолков. Стили.
+   Идея: сайт собран из самого продукта — плоскость и свет.
+   Акцент — не цвет, а свечение: тёплая LED-линия #FFD98A
+   работает как разделитель, подчёркивание и прогресс-бар.
+   Занятые в нише цвета (оранжевый, корпоративный синий,
+   голубой, изумруд) сознательно не используются.
+   ============================================================ */
+
+:root {
+  /* Графит — «выключенный» потолок */
+  --ink:        #101215;
+  --ink-2:      #171A1F;
+  --ink-3:      #22262C;
+
+  /* Штукатурка — светлые полосы */
+  --paper:      #F1F0EC;
+  --paper-2:    #E7E5DF;
+  --white:      #FFFFFF;
+
+  /* Текст */
+  --text:       #101215;
+  --text-soft:  #5E636A;
+  --text-dim:   #8B9097;
+  --on-dark:    #ECEAE5;
+  --on-dark-soft: #A2A7AE;
+
+  /* Свет — единственный акцент */
+  --glow:       #FFD98A;
+  --glow-soft:  #FFF0CE;
+  --glow-deep:  #C98F30;
+
+  /* Семантика — только в таблицах «входит / не входит» */
+  --ok:         #3C7A57;
+  --no:         #A6453A;
+
+  --line-light: rgba(16, 18, 21, .13);
+  --line-hair:  rgba(16, 18, 21, .07);
+  --line-dark:  rgba(255, 255, 255, .14);
+  --line-dark-hair: rgba(255, 255, 255, .07);
+
+  --maxw: 1200px;
+  --pad:  clamp(1.15rem, 4vw, 3rem);
+  --r:    4px;
+
+  --f-display: 'Onest', 'Segoe UI', system-ui, sans-serif;
+  --f-body:    'Commissioner', 'Segoe UI', system-ui, sans-serif;
+  --f-mono:    'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
+
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+::selection { background: var(--glow); color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--glow-deep);
+  outline-offset: 3px;
+}
+
+/* ---------- Layout ---------- */
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+
+.band { position: relative; }
+.band--dark { background: var(--ink); color: var(--on-dark); }
+.band--paper { background: var(--paper); }
+.band--paper2 { background: var(--paper-2); }
+.band--white { background: var(--white); }
+
+.section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+.section--tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
+
+/* ---------- Световая линия: фирменный разделитель ---------- */
+.lightline {
+  display: block;
+  height: 2px;
+  width: 56px;
+  background: var(--glow);
+  box-shadow: 0 0 14px 1px rgba(255, 217, 138, .75);
+  border: 0;
+  margin: 0 0 1.4rem;
+}
+.band--paper .lightline,
+.band--paper2 .lightline,
+.band--white .lightline {
+  background: var(--glow-deep);
+  box-shadow: 0 0 10px 0 rgba(201, 143, 48, .35);
+}
+
+/* ---------- Типографика ---------- */
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 0 0 .9rem;
+}
+.band--dark .eyebrow { color: var(--on-dark-soft); }
+
+/* Название блока — подсвечено маркером, как выделенный текст.
+   Раньше под ним шла золотистая линия; теперь светится сам текст,
+   и это работает одинаково на светлых и тёмных полосах.
+   Отрицательный левый отступ равен горизонтальному padding, чтобы
+   буквы остались на одной вертикали с заголовком ниже. */
+.eyebrow--mark {
+  /* Блочный, но по ширине текста. С inline-block нижний margin
+     не работал бы: у строчных элементов вертикальные отступы
+     не влияют на высоту строки, и заголовок прилипал вплотную. */
+  display: block;
+  width: fit-content;
+  padding: .3em .5em;
+  margin-left: -.5em;
+  margin-bottom: 1.5rem;
+  background: var(--glow);
+}
+.eyebrow--mark,
+.band--dark .eyebrow--mark,
+.page-hero .eyebrow--mark { color: var(--ink); }
+
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 700; letter-spacing: -.025em; text-wrap: balance; margin: 0; }
+
+.section__title {
+  font-size: clamp(1.7rem, 3.6vw, 2.7rem);
+  line-height: 1.1;
+  margin: 0 0 .8rem;
+  max-width: 20ch;
+}
+.section__lead {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  max-width: 62ch;
+  margin: 0 0 2.6rem;
+}
+.band--dark .section__lead { color: var(--on-dark-soft); }
+
+p { margin: 0 0 1rem; }
+.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  font-family: var(--f-body); font-weight: 600; font-size: .93rem;
+  padding: .95em 1.6em; border: 1px solid transparent; border-radius: var(--r);
+  text-decoration: none; cursor: pointer; transition: all .25s var(--ease);
+  line-height: 1.2;
+}
+.btn--glow {
+  background: var(--glow); color: var(--ink);
+  box-shadow: 0 0 0 0 rgba(255, 217, 138, 0);
+}
+.btn--glow:hover { box-shadow: 0 0 26px 0 rgba(255, 217, 138, .55); transform: translateY(-1px); }
+.btn--ink { background: var(--ink); color: var(--on-dark); }
+.btn--ink:hover { background: var(--ink-3); }
+.btn--ghost { background: transparent; color: inherit; border-color: currentColor; opacity: .85; }
+.btn--ghost:hover { opacity: 1; background: rgba(255, 255, 255, .06); }
+.band--paper .btn--ghost:hover, .band--white .btn--ghost:hover { background: rgba(16, 18, 21, .05); }
+.btn--sm { padding: .68em 1.15em; font-size: .84rem; }
+.btn--wide { width: 100%; }
+
+/* ============================================================
+   Шапка
+   ============================================================ */
+.header {
+  position: fixed; inset: 0 0 auto 0; z-index: 60;
+  transition: background .3s var(--ease), border-color .3s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.header.is-scrolled {
+  background: rgba(16, 18, 21, .92);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--line-dark-hair);
+}
+.header--solid { background: var(--ink); border-bottom-color: var(--line-dark-hair); }
+
+.header__inner {
+  display: flex; align-items: center; gap: 1.5rem;
+  /* Только вертикальный padding: горизонтальный приходит от .container
+     и шорткатом его перетирать нельзя — логотип уедет под край экрана. */
+  padding-block: 1rem;
+  color: var(--on-dark);
+}
+.logo { display: flex; align-items: baseline; gap: .55rem; text-decoration: none; flex: none; }
+.logo__mark, .logo__sub {
+  font-family: var(--f-display);
+  font-size: 1.14rem;
+  letter-spacing: -.02em;
+  line-height: 1;
+  text-transform: none;
+}
+.logo__mark { font-weight: 700; color: var(--on-dark); }
+.logo__line {
+  width: 26px; height: 2px; background: var(--glow);
+  box-shadow: 0 0 10px 0 rgba(255, 217, 138, .8);
+  align-self: center;
+}
+.logo__sub { font-weight: 400; color: var(--on-dark-soft); }
+
+.nav { display: flex; gap: 1.4rem; margin-left: auto; }
+.nav__link {
+  text-decoration: none; font-size: .88rem; color: var(--on-dark-soft);
+  transition: color .2s var(--ease); white-space: nowrap;
+}
+.nav__link:hover { color: var(--glow); }
+
+.header__side { display: flex; align-items: center; gap: .9rem; flex: none; }
+.header__phone {
+  font-family: var(--f-mono); font-size: .85rem; text-decoration: none;
+  color: var(--on-dark); white-space: nowrap;
+}
+.header__phone:hover { color: var(--glow); }
+
+.burger {
+  display: none; width: 42px; height: 42px; padding: 0;
+  background: transparent; border: 1px solid var(--line-dark); border-radius: var(--r);
+  cursor: pointer; position: relative;
+}
+.burger span {
+  position: absolute; left: 11px; width: 18px; height: 1.5px; background: var(--on-dark);
+  transition: transform .3s var(--ease), opacity .2s var(--ease);
+}
+.burger span:nth-child(1) { top: 15px; }
+.burger span:nth-child(2) { top: 20.5px; }
+.burger span:nth-child(3) { top: 26px; }
+.burger.is-open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.burger.is-open span:nth-child(2) { opacity: 0; }
+.burger.is-open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 55;
+  background: var(--ink); color: var(--on-dark);
+  display: flex; flex-direction: column; justify-content: center; gap: .35rem;
+  padding: 5rem var(--pad) 2rem;
+  opacity: 0; visibility: hidden; transition: opacity .3s var(--ease), visibility .3s;
+}
+.mobile-menu.is-open { opacity: 1; visibility: visible; }
+.mobile-menu__link {
+  font-family: var(--f-display); font-size: 1.5rem; font-weight: 600;
+  text-decoration: none; padding: .4rem 0; border-bottom: 1px solid var(--line-dark-hair);
+}
+.mobile-menu__foot { margin-top: 1.6rem; display: flex; flex-direction: column; gap: .8rem; }
+
+/* ============================================================
+   Hero — светлый, на реальном фото потолка.
+   Раньше здесь был графитовый фон с перспективной сеткой;
+   заменён на фотографию: продукт должен быть виден сразу.
+   ============================================================ */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--paper); color: var(--text);
+  padding: clamp(6.5rem, 12vw, 9.5rem) 0 0;
+}
+.hero__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 26%;
+  /* Фото живёт только в верхней части экрана: ниже начинается
+     полоса из четырёх механизмов, ей нужен спокойный фон. */
+  mask-image: linear-gradient(180deg, #000 0%, #000 44%, transparent 74%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 44%, transparent 74%);
+}
+.hero__scrim {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(97deg,
+      rgba(241, 240, 236, .97) 0%,
+      rgba(241, 240, 236, .95) 32%,
+      rgba(241, 240, 236, .70) 54%,
+      rgba(241, 240, 236, .22) 78%,
+      rgba(241, 240, 236, .06) 100%),
+    linear-gradient(180deg, transparent 40%, var(--paper) 78%);
+}
+
+.hero__content { position: relative; z-index: 2; max-width: 44rem; }
+.hero__title {
+  font-size: clamp(2rem, 5.6vw, 3.7rem);
+  line-height: 1.04; margin: 0 0 1.3rem;
+}
+/* Выделение — не цветной текст, а подсветка снизу: тот же
+   тёплый LED, что и в самом продукте. Контраст текста не падает. */
+.hero__title em {
+  font-style: normal;
+  background: linear-gradient(180deg, transparent 56%, rgba(255, 217, 138, .85) 56%, rgba(255, 217, 138, .85) 94%, transparent 94%);
+  padding: 0 .06em;
+}
+.hero__lead {
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  color: var(--text-soft); max-width: 46ch; margin: 0 0 2rem;
+}
+.hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero__fine {
+  margin: 1.5rem 0 0; font-family: var(--f-mono); font-size: .74rem;
+  color: var(--text-dim); letter-spacing: .02em;
+}
+
+/* Полоса из четырёх механизмов */
+.mechs {
+  position: relative; z-index: 2;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  border-top: 1px solid var(--line-light);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.mech {
+  padding: 1.6rem 1.5rem 1.9rem 0;
+  border-right: 1px solid var(--line-hair);
+}
+.mech:last-child { border-right: 0; }
+.mech__n {
+  font-family: var(--f-mono); font-size: .68rem; color: var(--glow-deep);
+  letter-spacing: .12em; display: block; margin-bottom: .5rem;
+}
+.mech h3 { font-size: 1rem; font-weight: 600; margin: 0 0 .3rem; letter-spacing: -.01em; }
+.mech p { font-size: .87rem; color: var(--text-soft); margin: 0; line-height: 1.5; }
+
+/* ============================================================
+   Калькулятор сметы
+   ============================================================ */
+.calc__grid { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 2.5rem; align-items: start; }
+
+.calc__steps { min-width: 0; }
+.calc__progress {
+  display: flex; gap: 4px; margin-bottom: 2rem;
+}
+.calc__progress span {
+  height: 3px; flex: 1; background: var(--line-light); transition: all .4s var(--ease);
+}
+.calc__progress span.is-done { background: var(--glow-deep); box-shadow: 0 0 8px 0 rgba(201, 143, 48, .5); }
+
+.step { display: none; }
+.step.is-active { display: block; animation: step-in .35s var(--ease); }
+@keyframes step-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.step__head { display: flex; align-items: baseline; gap: .7rem; margin-bottom: 1.2rem; }
+.step__n { font-family: var(--f-mono); font-size: .75rem; color: var(--glow-deep); letter-spacing: .1em; }
+.step__title { font-size: 1.3rem; font-weight: 600; }
+.step__hint { font-size: .9rem; color: var(--text-soft); margin: -.6rem 0 1.2rem; }
+
+.opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: .6rem; }
+.opt { position: relative; }
+.opt input { position: absolute; opacity: 0; width: 0; height: 0; }
+.opt__box {
+  display: block; padding: .95rem 1rem; background: var(--white);
+  border: 1px solid var(--line-light); border-radius: var(--r);
+  cursor: pointer; transition: all .2s var(--ease); height: 100%;
+}
+.opt__box:hover { border-color: var(--glow-deep); }
+.opt input:checked + .opt__box {
+  border-color: var(--glow-deep);
+  box-shadow: inset 0 0 0 1px var(--glow-deep), 0 0 18px -6px rgba(201, 143, 48, .5);
+}
+.opt input:focus-visible + .opt__box { outline: 2px solid var(--glow-deep); outline-offset: 2px; }
+.opt__t { display: block; font-weight: 600; font-size: .95rem; }
+.opt__m { display: block; font-family: var(--f-mono); font-size: .74rem; color: var(--text-dim); margin-top: .15rem; }
+.opt__h { display: block; font-size: .8rem; color: var(--text-soft); margin-top: .45rem; line-height: 1.45; }
+
+.fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .35rem; }
+.field__unit { color: var(--text-dim); font-weight: 400; font-family: var(--f-mono); font-size: .78rem; }
+.field input[type="number"], .field input[type="text"], .field input[type="tel"], .field input[type="date"], .field select, .field textarea {
+  width: 100%; padding: .75rem .9rem; font-family: var(--f-mono); font-size: .95rem;
+  background: var(--white); color: var(--text);
+  border: 1px solid var(--line-light); border-radius: var(--r);
+  transition: border-color .2s var(--ease);
+}
+.field textarea { font-family: var(--f-body); resize: vertical; min-height: 90px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--glow-deep); }
+.field__note { font-size: .78rem; color: var(--text-dim); margin: .35rem 0 0; }
+.field.is-invalid input { border-color: var(--no); }
+.field__err { display: block; font-size: .78rem; color: var(--no); margin-top: .3rem; min-height: 1em; }
+
+.calc__nav { display: flex; gap: .7rem; margin-top: 1.8rem; }
+
+/* Смета */
+.estimate {
+  position: sticky; top: 90px;
+  background: var(--ink); color: var(--on-dark);
+  border-radius: var(--r); padding: 1.6rem 1.5rem 1.5rem;
+}
+.estimate__top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .25rem; }
+.estimate__label { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--on-dark-soft); }
+.estimate__room { font-family: var(--f-mono); font-size: .74rem; color: var(--glow); }
+.estimate hr.lightline { width: 100%; margin: 1rem 0 .2rem; }
+
+.estimate__rows { font-size: .86rem; }
+.estimate__row {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: .8rem; padding: .5rem 0; border-bottom: 1px solid var(--line-dark-hair);
+}
+.estimate__row:last-of-type { border-bottom: 0; }
+.estimate__name { min-width: 0; }
+.estimate__name b { font-weight: 500; display: block; }
+.estimate__calc { font-family: var(--f-mono); font-size: .72rem; color: var(--on-dark-soft); }
+.estimate__sum { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; align-self: center; }
+.estimate__row--free .estimate__sum { color: var(--glow); }
+
+.estimate__total {
+  margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line-dark);
+}
+.estimate__total-label { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-soft); }
+.estimate__total-val {
+  font-family: var(--f-display); font-size: clamp(1.6rem, 3.4vw, 2.1rem); font-weight: 700;
+  letter-spacing: -.03em; line-height: 1.15; margin: .15rem 0 .1rem;
+  font-variant-numeric: tabular-nums;
+}
+.estimate__per { font-family: var(--f-mono); font-size: .76rem; color: var(--on-dark-soft); }
+.estimate__note {
+  margin: 1rem 0 1.2rem; padding: .7rem .85rem;
+  background: rgba(255, 217, 138, .09); border-left: 2px solid var(--glow);
+  font-size: .8rem; line-height: 1.5; color: var(--on-dark);
+}
+.estimate__empty { font-size: .88rem; color: var(--on-dark-soft); padding: 1.5rem 0; }
+
+/* ============================================================
+   Что входит в цену, а что нет
+   ============================================================ */
+.incl { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); }
+.incl__col { background: var(--white); padding: 1.7rem 1.6rem; }
+.incl__h { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; font-size: 1.05rem; font-weight: 600; }
+.incl__badge {
+  font-family: var(--f-mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: .2em .55em; border-radius: 2px;
+}
+.incl__badge--ok { background: rgba(60, 122, 87, .12); color: var(--ok); }
+.incl__badge--no { background: rgba(166, 69, 58, .1); color: var(--no); }
+.incl ul { list-style: none; margin: 0; padding: 0; }
+.incl li {
+  display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
+  padding: .6rem 0; border-bottom: 1px solid var(--line-hair); font-size: .93rem;
+}
+.incl li:last-child { border-bottom: 0; }
+.incl li span:last-child { font-family: var(--f-mono); font-size: .82rem; color: var(--text-dim); white-space: nowrap; }
+.incl__foot { margin: 1.4rem 0 0; font-size: .9rem; color: var(--text-soft); max-width: 66ch; }
+
+/* ============================================================
+   Сроки — расписание
+   ============================================================ */
+.sched { border-top: 1px solid var(--line-dark); }
+.sched__row {
+  display: grid; grid-template-columns: 148px minmax(0, 1fr) auto;
+  gap: 1.5rem; align-items: baseline;
+  padding: 1.15rem 0; border-bottom: 1px solid var(--line-dark-hair);
+}
+.sched__when { font-family: var(--f-mono); font-size: .82rem; color: var(--glow); }
+.sched__what b { font-weight: 600; display: block; font-size: 1rem; }
+.sched__what span { font-size: .87rem; color: var(--on-dark-soft); }
+.sched__dur { font-family: var(--f-mono); font-size: .87rem; white-space: nowrap; }
+
+.penalty {
+  margin-top: 2.2rem; padding: 1.5rem 1.6rem;
+  border: 1px solid var(--glow); border-radius: var(--r);
+  background: rgba(255, 217, 138, .07);
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.5rem; align-items: center;
+}
+.penalty__num {
+  font-family: var(--f-display); font-weight: 700; font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--glow); line-height: 1; letter-spacing: -.03em; white-space: nowrap;
+}
+.penalty p { margin: 0; font-size: .95rem; color: var(--on-dark); }
+.penalty p + p { margin-top: .5rem; color: var(--on-dark-soft); font-size: .87rem; }
+
+/* ============================================================
+   Бригада
+   ============================================================ */
+.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); }
+.mate { background: var(--white); padding: 1.5rem; }
+.mate__ava {
+  width: 62px; height: 62px; border-radius: 50%;
+  display: grid; place-items: center; margin-bottom: 1rem;
+  background: var(--ink); color: var(--glow);
+  font-family: var(--f-display); font-weight: 700; font-size: 1.35rem; letter-spacing: -.03em;
+}
+.mate h3 { font-size: 1.1rem; margin: 0 0 .1rem; }
+.mate__role { font-family: var(--f-mono); font-size: .74rem; color: var(--text-dim); margin: 0 0 .9rem; }
+.mate__stats { display: flex; gap: 1.3rem; margin: 0 0 .9rem; }
+.mate__stat b { display: block; font-family: var(--f-mono); font-size: 1.05rem; font-weight: 500; }
+.mate__stat span { font-size: .74rem; color: var(--text-dim); }
+.mate__quote { font-size: .88rem; color: var(--text-soft); margin: 0; line-height: 1.55; }
+
+.kit { margin-top: 2rem; padding: 1.6rem; background: var(--white); border: 1px solid var(--line-light); }
+.kit h3 { font-size: 1.05rem; margin: 0 0 .3rem; }
+.kit > p { font-size: .9rem; color: var(--text-soft); margin: 0 0 1.1rem; max-width: 60ch; }
+.kit ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: .5rem 1.5rem; }
+.kit li { display: flex; gap: .6rem; font-size: .91rem; align-items: baseline; }
+.kit li::before { content: ''; flex: none; width: 14px; height: 2px; background: var(--glow-deep); transform: translateY(-4px); }
+
+/* ============================================================
+   Узел в разрезе — SVG-схемы
+   ============================================================ */
+.nodes { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 2rem; align-items: start; }
+.nodes__tabs { display: flex; flex-direction: column; gap: 2px; }
+.node-tab {
+  text-align: left; background: transparent; border: 0; border-left: 2px solid var(--line-dark-hair);
+  padding: .85rem 1rem; cursor: pointer; color: var(--on-dark-soft);
+  font-family: var(--f-body); font-size: .93rem; transition: all .2s var(--ease);
+}
+.node-tab b { display: block; font-weight: 600; color: var(--on-dark); }
+.node-tab small { font-family: var(--f-mono); font-size: .72rem; }
+.node-tab:hover { background: rgba(255, 255, 255, .04); }
+.node-tab.is-active { border-left-color: var(--glow); background: rgba(255, 217, 138, .07); }
+.node-tab.is-active b { color: var(--glow); }
+
+.node-stage { background: var(--ink-2); border: 1px solid var(--line-dark-hair); border-radius: var(--r); padding: 1.5rem; }
+.node-panel { display: none; }
+.node-panel.is-active { display: block; }
+.node-panel svg { width: 100%; height: auto; }
+.node-panel__txt { margin: 1.2rem 0 0; font-size: .93rem; color: var(--on-dark-soft); max-width: 62ch; }
+.node-panel__txt b { color: var(--on-dark); font-weight: 600; }
+
+/* ============================================================
+   Работы — карточки-спецификации
+   ============================================================ */
+.works { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.work { background: var(--white); border: 1px solid var(--line-light); display: flex; flex-direction: column; }
+.work__vis { height: 200px; position: relative; overflow: hidden; background: var(--ink); }
+/* Кадрируем вверх: в карточке про потолок должен быть виден потолок,
+   а не мебель. Точку задаём для каждой работы отдельно. */
+.work__vis img { width: 100%; height: 100%; object-fit: cover; display: block;
+                 object-position: 50% 12%; }
+.work__vis img[src*="kuhnya"]   { object-position: 50% 6%; }
+.work__vis img[src*="vannaya"]  { object-position: 50% 0%; }
+.work__vis img[src*="mansarda"] { object-position: 42% 8%; }
+.work__vis span {
+  position: absolute; left: .8rem; bottom: .7rem; z-index: 2;
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .08em;
+  color: var(--on-dark); background: rgba(16, 18, 21, .72); padding: .25em .55em;
+}
+.work__body { padding: 1.2rem 1.3rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+.work h3 { font-size: 1.05rem; margin: 0 0 .8rem; }
+.work__spec { margin: 0 0 1.1rem; font-size: .85rem; }
+.work__spec div { display: flex; justify-content: space-between; gap: 1rem; padding: .32rem 0; border-bottom: 1px solid var(--line-hair); }
+.work__spec dt { color: var(--text-dim); }
+.work__spec dd { margin: 0; font-family: var(--f-mono); font-size: .8rem; text-align: right; }
+.work__foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.work__price { font-family: var(--f-mono); font-size: 1.02rem; font-weight: 500; }
+.work__price small { display: block; font-size: .7rem; color: var(--text-dim); }
+
+/* ============================================================
+   Полотна по задачам
+   ============================================================ */
+.tasks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); }
+.task { background: var(--white); padding: 1.5rem 1.5rem 1.6rem; }
+.task__q { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--glow-deep); margin: 0 0 .6rem; }
+.task h3 { font-size: 1.12rem; margin: 0 0 .6rem; }
+.task p { font-size: .9rem; color: var(--text-soft); margin: 0 0 1.1rem; }
+.task__pick { border-top: 1px solid var(--line-hair); padding-top: .9rem; }
+.task__pick b { display: block; font-size: .93rem; }
+.task__pick span { font-family: var(--f-mono); font-size: .78rem; color: var(--text-dim); }
+
+/* ============================================================
+   Как проходит заказ
+   ============================================================ */
+.process { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0; border-top: 1px solid var(--line-light); }
+.stage { padding: 1.5rem 1.3rem 1.6rem 0; border-right: 1px solid var(--line-hair); }
+.stage:last-child { border-right: 0; }
+.stage__n { font-family: var(--f-mono); font-size: .72rem; color: var(--glow-deep); letter-spacing: .1em; display: block; margin-bottom: .55rem; }
+.stage h3 { font-size: 1rem; margin: 0 0 .35rem; }
+.stage p { font-size: .87rem; color: var(--text-soft); margin: 0 0 .6rem; line-height: 1.5; }
+.stage__t { font-family: var(--f-mono); font-size: .74rem; color: var(--text-dim); }
+
+/* ============================================================
+   Чек-лист приёмки
+   ============================================================ */
+.checklist__wrap { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 2.5rem; align-items: start; }
+.checks { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
+.checks li {
+  break-inside: avoid; display: flex; gap: .75rem; align-items: flex-start;
+  padding: .6rem 0; border-bottom: 1px solid var(--line-hair); font-size: .93rem;
+}
+.checks li::before {
+  content: ''; flex: none; width: 15px; height: 15px; margin-top: .28rem;
+  border: 1.5px solid var(--glow-deep); border-radius: 2px;
+}
+.checklist__aside { background: var(--white); border: 1px solid var(--line-light); padding: 1.4rem; }
+.checklist__aside p { font-size: .9rem; color: var(--text-soft); }
+.checklist__aside p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   Отзывы с ответами
+   ============================================================ */
+.reviews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.review { background: var(--white); border: 1px solid var(--line-light); padding: 1.4rem 1.45rem; }
+.review__top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .7rem; }
+.review__who b { font-weight: 600; }
+.review__meta { font-family: var(--f-mono); font-size: .72rem; color: var(--text-dim); display: block; }
+.review__stars { color: var(--glow-deep); font-size: .9rem; letter-spacing: .1em; white-space: nowrap; }
+.review__text { font-size: .93rem; margin: 0; }
+.review__answer {
+  margin: 1rem 0 0; padding: .85rem 1rem; background: var(--paper-2);
+  border-left: 2px solid var(--ink); font-size: .88rem; color: var(--text-soft);
+}
+.review__answer b { display: block; font-family: var(--f-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text); margin-bottom: .25rem; }
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq { max-width: 860px; border-top: 1px solid var(--line-light); }
+.faq__item { border-bottom: 1px solid var(--line-light); }
+.faq__item summary {
+  cursor: pointer; list-style: none; padding: 1.1rem 2.5rem 1.1rem 0;
+  position: relative; font-weight: 600; font-size: 1.02rem;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: ''; position: absolute; right: .5rem; top: 1.55rem;
+  width: 11px; height: 11px; border-right: 1.5px solid var(--glow-deep); border-bottom: 1.5px solid var(--glow-deep);
+  transform: rotate(45deg); transition: transform .25s var(--ease);
+}
+.faq__item[open] summary::after { transform: rotate(-135deg); top: 1.75rem; }
+.faq__a { padding: 0 3rem 1.2rem 0; color: var(--text-soft); font-size: .95rem; }
+.faq__a p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   Форма записи
+   ============================================================ */
+.order__grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 3rem; align-items: start; }
+.order__form { display: grid; gap: 1rem; }
+.order__note { font-size: .82rem; color: var(--on-dark-soft); margin: 0; }
+.band--dark .field label { color: var(--on-dark); }
+.band--dark .field input, .band--dark .field select, .band--dark .field textarea {
+  background: var(--ink-2); color: var(--on-dark); border-color: var(--line-dark);
+}
+.band--dark .field__note { color: var(--on-dark-soft); }
+.band--dark .field input::placeholder { color: #6C7178; }
+
+.order__side { border-left: 1px solid var(--line-dark-hair); padding-left: 2rem; }
+.order__promise { margin: 0 0 1.6rem; font-size: 1.02rem; }
+.order__promise b { color: var(--glow); }
+.contacts { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
+.contacts li { display: grid; gap: .1rem; }
+.contacts dt, .contacts__k { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--on-dark-soft); }
+.contacts a { font-family: var(--f-mono); font-size: 1rem; text-decoration: none; color: var(--on-dark); }
+.contacts a:hover { color: var(--glow); }
+
+.success {
+  background: rgba(255, 217, 138, .1); border: 1px solid var(--glow);
+  padding: 1.6rem; border-radius: var(--r);
+}
+.success h3 { color: var(--glow); font-size: 1.2rem; margin: 0 0 .5rem; }
+.success p { margin: 0; color: var(--on-dark-soft); font-size: .93rem; }
+
+/* ============================================================
+   Подвал
+   ============================================================ */
+.footer { background: var(--ink-2); color: var(--on-dark-soft); padding: 3rem 0 2rem; border-top: 1px solid var(--line-dark-hair); }
+.footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; margin-bottom: 2.2rem; }
+.footer h4 { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-soft); font-weight: 400; margin: 0 0 .9rem; }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.footer a { text-decoration: none; font-size: .9rem; }
+.footer a:hover { color: var(--glow); }
+.footer__about { font-size: .9rem; max-width: 34ch; }
+.footer__bottom { border-top: 1px solid var(--line-dark-hair); padding-top: 1.4rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .78rem; }
+.footer__demo { color: var(--glow-deep); }
+.footer__credits { flex-basis: 100%; color: var(--faint, #75726B); opacity: .8; }
+.footer__credits a { text-decoration: underline; }
+
+/* ============================================================
+   Подстраницы
+   ============================================================ */
+.page-hero { background: var(--ink); color: var(--on-dark); padding: clamp(7rem, 13vw, 9.5rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.page-hero h1 { font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.05; margin: 0 0 1rem; max-width: 20ch; }
+/* :not(.eyebrow) обязательно — иначе это правило перебивает кегль,
+   цвет и отступы у названия блока: оно тоже <p>. */
+.page-hero p:not(.eyebrow) { color: var(--on-dark-soft); max-width: 58ch; font-size: 1.05rem; margin: 0; }
+.back {
+  /* Блочный, но по ширине текста: надзаголовок ниже стал inline-block,
+     и при inline-flex они вставали в одну строку. */
+  display: flex; width: fit-content;
+  align-items: center; gap: .5rem; text-decoration: none;
+  font-family: var(--f-mono); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--on-dark-soft); margin-bottom: 1.6rem;
+}
+.back:hover { color: var(--glow); }
+
+.prose { max-width: 68ch; }
+.prose h2 { font-size: clamp(1.35rem, 3vw, 1.85rem); margin: 2.6rem 0 .8rem; }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { font-size: 1.1rem; margin: 1.8rem 0 .5rem; }
+.prose ul, .prose ol { padding-left: 1.2rem; margin: 0 0 1.2rem; }
+.prose li { margin-bottom: .5rem; }
+.prose blockquote {
+  margin: 1.4rem 0; padding: .9rem 1.2rem; background: var(--white);
+  border-left: 2px solid var(--glow-deep); font-size: .96rem;
+}
+.prose blockquote p:last-child { margin-bottom: 0; }
+.prose__cite { font-family: var(--f-mono); font-size: .74rem; color: var(--text-dim); display: block; margin-top: .5rem; }
+
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line-light); border: 1px solid var(--line-light); margin: 1.6rem 0 2rem; }
+.duo__col { background: var(--white); padding: 1.5rem; }
+.duo__col h3 { margin-top: 0; }
+.duo ul { list-style: none; padding: 0; margin: 0; }
+.duo li { padding: .5rem 0; border-bottom: 1px solid var(--line-hair); font-size: .93rem; }
+.duo li:last-child { border-bottom: 0; }
+
+.sla { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--line-dark-hair); border: 1px solid var(--line-dark-hair); margin: 2rem 0 0; }
+.sla__cell { background: var(--ink-2); padding: 1.3rem 1.4rem; }
+.sla__cell b { display: block; font-family: var(--f-display); font-size: 1.6rem; color: var(--glow); letter-spacing: -.02em; }
+.sla__cell span { font-size: .86rem; color: var(--on-dark-soft); }
+
+/* ============================================================
+   Reveal
+   ============================================================ */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal[data-delay="1"] { transition-delay: .06s; }
+.reveal[data-delay="2"] { transition-delay: .13s; }
+.reveal[data-delay="3"] { transition-delay: .2s; }
+.reveal[data-delay="4"] { transition-delay: .27s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .step.is-active { animation: none; }
+  * { transition-duration: .01ms !important; }
+}
+
+/* ============================================================
+   Адаптив: 1024 / 900 / 560
+   ============================================================ */
+@media (max-width: 1024px) {
+  .calc__grid { grid-template-columns: 1fr; }
+  .estimate { position: static; }
+  .checklist__wrap { grid-template-columns: 1fr; gap: 1.6rem; }
+  .order__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .order__side { border-left: 0; border-top: 1px solid var(--line-dark-hair); padding-left: 0; padding-top: 1.8rem; }
+  .nodes { grid-template-columns: 1fr; }
+  .nodes__tabs { flex-direction: row; overflow-x: auto; gap: 0; }
+  .node-tab { border-left: 0; border-bottom: 2px solid var(--line-dark-hair); white-space: nowrap; }
+  .node-tab.is-active { border-left-color: transparent; border-bottom-color: var(--glow); }
+  .mechs { grid-template-columns: 1fr 1fr; }
+  .mech:nth-child(2n) { border-right: 0; }
+  .mech:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark-hair); }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Подпись логотипа теперь того же кегля, что и «РОВНО», и занимает
+   заметно больше места — в шапке прячем её раньше, чем сворачивается
+   меню, иначе шапка переполняется в диапазоне 1025–1150 px.
+   В подвале места хватает, там она видна всегда. */
+@media (max-width: 1200px) {
+  .header .logo__sub { display: none; }
+}
+
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .header__phone { display: none; }
+  .burger { display: block; }
+  .header__side { margin-left: auto; }
+  .incl { grid-template-columns: 1fr; }
+  .duo { grid-template-columns: 1fr; }
+  .works { grid-template-columns: 1fr; }
+  .reviews { grid-template-columns: 1fr; }
+  .tasks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sched__row { grid-template-columns: 120px minmax(0, 1fr); gap: 1rem; }
+  .sched__dur { grid-column: 2; font-size: .8rem; color: var(--on-dark-soft); }
+  .penalty { grid-template-columns: 1fr; gap: .8rem; }
+  .checks { columns: 1; }
+  .stage { border-right: 0; border-bottom: 1px solid var(--line-hair); padding-right: 0; }
+  .stage:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .tasks { grid-template-columns: 1fr; }
+
+  /* Шапка: на узком экране остаются только логотип и бургер —
+     кнопка записи живёт внутри мобильного меню. */
+  .header__inner { gap: .75rem; }
+  .header__side > .btn { display: none; }
+  .section { padding: 3rem 0; }
+  .mechs { grid-template-columns: 1fr; }
+  .mech { border-right: 0; border-bottom: 1px solid var(--line-dark-hair); padding-right: 0; }
+  .mech:last-child { border-bottom: 0; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+  .hero__img { object-position: 50% 20%; }
+  .opts { grid-template-columns: 1fr; }
+  .calc__nav .btn { flex: 1; }
+  .estimate { padding: 1.2rem 1.1rem; }
+  .estimate__row { grid-template-columns: 1fr; gap: .1rem; }
+  .estimate__sum { text-align: right; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .work__foot { flex-direction: column; align-items: stretch; gap: .8rem; }
+}

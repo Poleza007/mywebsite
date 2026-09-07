@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>РОВНО — натяжные потолки в Москве с датой монтажа в договоре</title>
+<meta name="description" content="Натяжные потолки в Москве. Дата монтажа фиксируется в договоре: опоздаем — минус 1000 ₽ за каждый день. Смета построчно до подписания, имя мастера известно заранее.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@600;700&family=Commissioner:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================== ШАПКА ============================== -->
+<header class="header header--solid" id="header">
+  <div class="container header__inner">
+    <a href="#hero" class="logo">
+      <span class="logo__mark">РОВНО</span>
+      <span class="logo__line" aria-hidden="true"></span>
+      <span class="logo__sub">натяжные потолки</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#calc" class="nav__link">Смета</a>
+      <a href="#timing" class="nav__link">Сроки</a>
+      <a href="#team" class="nav__link">Бригада</a>
+      <a href="#nodes" class="nav__link">Узлы</a>
+      <a href="#works" class="nav__link">Работы</a>
+      <a href="garantiya.html" class="nav__link">Гарантия</a>
+    </nav>
+
+    <div class="header__side">
+      <a href="tel:+74951208410" class="header__phone">+7 (495) 120-84-10</a>
+      <a href="#calc" class="btn btn--glow btn--sm">Рассчитать смету</a>
+      <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#calc" class="mobile-menu__link">Смета</a>
+  <a href="#timing" class="mobile-menu__link">Сроки</a>
+  <a href="#team" class="mobile-menu__link">Бригада</a>
+  <a href="#nodes" class="mobile-menu__link">Узлы в разрезе</a>
+  <a href="#works" class="mobile-menu__link">Работы</a>
+  <a href="#reviews" class="mobile-menu__link">Отзывы</a>
+  <a href="garantiya.html" class="mobile-menu__link">Если что-то пошло не так</a>
+  <a href="dogovor.html" class="mobile-menu__link">Договор</a>
+  <div class="mobile-menu__foot">
+    <a href="tel:+74951208410" class="btn btn--ghost">+7 (495) 120-84-10</a>
+    <a href="#order" class="btn btn--glow">Записаться на замер</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="hero">
+  <img class="hero__img" src="images/hero-potolok.jpg"
+       alt="Белый натяжной потолок со встроенными световыми линиями тёплого свечения">
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__content">
+      <p class="eyebrow">Москва и 30 км от МКАД · монтаж с 2014 года</p>
+      <h1 class="hero__title">Натяжные потолки с датой монтажа <em>в договоре</em></h1>
+      <p class="hero__lead">
+        Матовый потолок — от 590 ₽ за м² вместе с монтажом. Профиль, светильники
+        и обход труб калькулятор покажет отдельными строками: смета видна целиком
+        ещё до подписания.
+      </p>
+      <div class="hero__actions">
+        <a href="#calc" class="btn btn--ink">Собрать смету за минуту</a>
+        <a href="#works" class="btn btn--ghost">Посмотреть работы</a>
+      </div>
+      <p class="hero__fine">Замер бесплатный, даже если вы откажетесь от заказа</p>
+    </div>
+
+    <div class="mechs">
+      <article class="mech">
+        <span class="mech__n">01</span>
+        <h3>Дата в договоре</h3>
+        <p>Не приедем в назначенный день — минус 1000 ₽ за каждые сутки. Пункт 4.3, он опубликован.</p>
+      </article>
+      <article class="mech">
+        <span class="mech__n">02</span>
+        <h3>Смета построчно</h3>
+        <p>Полотно, профиль, каждый светильник и каждый обход трубы — отдельной строкой до подписания.</p>
+      </article>
+      <article class="mech">
+        <span class="mech__n">03</span>
+        <h3>Пылесос и бахилы</h3>
+        <p>Бригада приезжает со строительным пылесосом, сменной обувью и плёнкой. Мусор увозим с собой.</p>
+      </article>
+      <article class="mech">
+        <span class="mech__n">04</span>
+        <h3>Имя мастера заранее</h3>
+        <p>За сутки до монтажа присылаем, кто приедет: имя, стаж и его прошлые работы.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== КАЛЬКУЛЯТОР ============================== -->
+<section class="band band--paper section" id="calc">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Расчёт стоимости</p>
+    <h2 class="section__title">Смета, а не одна цифра</h2>
+    <p class="section__lead">
+      Пять шагов — и вы видите таблицу позиций с ценой за единицу, а не итог,
+      который потом «уточнит замерщик». Это верхняя граница: после замера цена
+      может только уменьшиться.
+    </p>
+
+    <div class="calc__grid">
+      <div class="calc__steps">
+        <div class="calc__progress" id="calc-progress" aria-hidden="true">
+          <span class="is-done"></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Шаг 1 -->
+        <div class="step is-active" data-step="1">
+          <div class="step__head"><span class="step__n">ШАГ 1</span><h3 class="step__title">Какое помещение</h3></div>
+          <p class="step__hint">Подставим типовые площадь, периметр и число светильников — их можно поправить на следующем шаге.</p>
+          <div class="opts" id="opt-room"></div>
+        </div>
+
+        <!-- Шаг 2 -->
+        <div class="step" data-step="2">
+          <div class="step__head"><span class="step__n">ШАГ 2</span><h3 class="step__title">Размеры</h3></div>
+          <p class="step__hint">Периметр считаем из площади для типовых пропорций комнаты. Знаете точный — впишите свой.</p>
+          <div class="fields">
+            <div class="field" id="f-area">
+              <label for="area">Площадь потолка <span class="field__unit">м²</span></label>
+              <input type="number" id="area" min="1" max="200" step="0.5" value="16" inputmode="decimal">
+              <span class="field__err" data-err="area"></span>
+            </div>
+            <div class="field">
+              <label for="height">Высота помещения <span class="field__unit">м</span></label>
+              <input type="number" id="height" min="2" max="6" step="0.05" value="2.7" inputmode="decimal">
+              <p class="field__note">Выше 3 м — добавится работа на высоте.</p>
+            </div>
+            <div class="field">
+              <label for="perimeter">Периметр <span class="field__unit">п.м</span></label>
+              <input type="number" id="perimeter" min="1" max="300" step="0.1" value="16.2" inputmode="decimal">
+              <p class="field__note" id="perimeter-note">Рассчитан автоматически.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 3 -->
+        <div class="step" data-step="3">
+          <div class="step__head"><span class="step__n">ШАГ 3</span><h3 class="step__title">Полотно и профиль</h3></div>
+          <p class="step__hint">Не знаете, что выбрать — берите матовое и стандартный багет: так делают три четверти заказов.</p>
+          <div class="opts" id="opt-fabric"></div>
+          <div class="opts" id="opt-profile" style="margin-top:.6rem"></div>
+        </div>
+
+        <!-- Шаг 4 -->
+        <div class="step" data-step="4">
+          <div class="step__head"><span class="step__n">ШАГ 4</span><h3 class="step__title">Освещение</h3></div>
+          <p class="step__hint">Считаем закладные и монтаж. Сами светильники вы покупаете где хотите — мы на них не зарабатываем.</p>
+          <div class="fields">
+            <div class="field">
+              <label for="spots">Точечные светильники <span class="field__unit">шт</span></label>
+              <input type="number" id="spots" min="0" max="40" step="1" value="4" inputmode="numeric">
+            </div>
+            <div class="field">
+              <label for="chandelier">Закладные под люстру <span class="field__unit">шт</span></label>
+              <input type="number" id="chandelier" min="0" max="6" step="1" value="0" inputmode="numeric">
+            </div>
+            <div class="field">
+              <label for="line">Световая линия <span class="field__unit">п.м</span></label>
+              <input type="number" id="line" min="0" max="60" step="0.1" value="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="track">Встроенный трек <span class="field__unit">п.м</span></label>
+              <input type="number" id="track" min="0" max="60" step="0.1" value="0" inputmode="decimal">
+            </div>
+          </div>
+        </div>
+
+        <!-- Шаг 5 -->
+        <div class="step" data-step="5">
+          <div class="step__head"><span class="step__n">ШАГ 5</span><h3 class="step__title">Сложность объекта</h3></div>
+          <p class="step__hint">Именно эти позиции обычно всплывают на замере как «доплата». Здесь они видны сразу.</p>
+          <div class="fields">
+            <div class="field">
+              <label for="pipes">Обход труб <span class="field__unit">шт</span></label>
+              <input type="number" id="pipes" min="0" max="20" step="1" value="0" inputmode="numeric">
+            </div>
+            <div class="field">
+              <label for="corners">Внешних углов сверх четырёх <span class="field__unit">шт</span></label>
+              <input type="number" id="corners" min="0" max="20" step="1" value="0" inputmode="numeric">
+            </div>
+            <div class="field">
+              <label for="niche">Ниша под скрытый карниз <span class="field__unit">п.м</span></label>
+              <input type="number" id="niche" min="0" max="30" step="0.1" value="0" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="dismantle">Демонтаж старого потолка</label>
+              <select id="dismantle">
+                <option value="0">Не нужен</option>
+                <option value="1">Нужен, снять старое полотно</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc__nav">
+          <button class="btn btn--ghost" id="calc-prev" type="button" disabled>Назад</button>
+          <button class="btn btn--ink" id="calc-next" type="button">Далее</button>
+        </div>
+      </div>
+
+      <!-- Смета -->
+      <aside class="estimate" id="estimate" aria-live="polite">
+        <div class="estimate__top">
+          <span class="estimate__label">Смета</span>
+          <span class="estimate__room" id="est-room">Спальня · 16 м²</span>
+        </div>
+        <hr class="lightline">
+        <div class="estimate__rows" id="est-rows"></div>
+        <div class="estimate__total">
+          <span class="estimate__total-label">Итого, верхняя граница</span>
+          <div class="estimate__total-val" id="est-total">—</div>
+          <span class="estimate__per" id="est-per"></span>
+        </div>
+        <p class="estimate__note" id="est-note">
+          Это потолок цены, а не приманка. После замера сумма может только уменьшиться —
+          вырасти она может лишь если вы сами измените задачу.
+        </p>
+        <a href="#order" class="btn btn--glow btn--wide">Записаться на замер</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ВХОДИТ / НЕ ВХОДИТ ============================== -->
+<section class="band band--white section" id="included">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Границы цены</p>
+    <h2 class="section__title">Что входит в цену, а что нет</h2>
+    <p class="section__lead">
+      Список слева — уже в смете. Список справа — то, что может добавиться, и сразу
+      по какой цене. Никаких «нам там что-то помешало» на объекте.
+    </p>
+
+    <div class="incl">
+      <div class="incl__col">
+        <h3 class="incl__h"><span class="incl__badge incl__badge--ok">Входит</span> Уже в смете</h3>
+        <ul>
+          <li><span>Выезд замерщика по Москве</span><span>0 ₽</span></li>
+          <li><span>Полотно нужного размера, раскрой</span><span>по смете</span></li>
+          <li><span>Профиль по всему периметру</span><span>по смете</span></li>
+          <li><span>Монтаж полотна и нагрев помещения</span><span>по смете</span></li>
+          <li><span>Установка точечных светильников</span><span>350 ₽/шт</span></li>
+          <li><span>Укрывание мебели плёнкой</span><span>0 ₽</span></li>
+          <li><span>Уборка и вывоз мусора</span><span>0 ₽</span></li>
+          <li><span>Гарантийный талон и акт приёмки</span><span>0 ₽</span></li>
+        </ul>
+      </div>
+      <div class="incl__col">
+        <h3 class="incl__h"><span class="incl__badge incl__badge--no">Отдельно</span> Может добавиться</h3>
+        <ul>
+          <li><span>Демонтаж старого натяжного потолка</span><span>180 ₽/м²</span></li>
+          <li><span>Обход трубы отопления</span><span>500 ₽/шт</span></li>
+          <li><span>Внешний угол сверх четырёх</span><span>400 ₽/шт</span></li>
+          <li><span>Ниша под скрытый карниз</span><span>950 ₽/п.м</span></li>
+          <li><span>Работа на высоте выше 3 м</span><span>120 ₽/м²</span></li>
+          <li><span>Сами светильники и люстра</span><span>покупаете сами</span></li>
+          <li><span>Выезд за 30 км от МКАД</span><span>35 ₽/км</span></li>
+          <li><span>Штробление и электрика</span><span>не делаем</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="incl__foot">
+      Последняя строка — тоже ответ. Электрику мы не трогаем: если провода нужно тянуть заново,
+      честнее сказать это на замере, чем взяться и сорвать срок.
+    </p>
+  </div>
+</section>
+
+<!-- ============================== СРОКИ ============================== -->
+<section class="band band--dark section" id="timing">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Сроки</p>
+    <h2 class="section__title">Не «за один день», а расписание</h2>
+    <p class="section__lead">
+      «Сделаем за день» говорят все. Мы говорим, что происходит в каждый из дней
+      и что будет, если мы этот день сорвём.
+    </p>
+
+    <div class="sched">
+      <div class="sched__row">
+        <span class="sched__when">День 0</span>
+        <span class="sched__what"><b>Замер</b><span>Приезжаем в интервале, который выбрали вы. Привозим образцы полотна и профиля.</span></span>
+        <span class="sched__dur">в течение 24 часов</span>
+      </div>
+      <div class="sched__row">
+        <span class="sched__when">День 0</span>
+        <span class="sched__what"><b>Договор и смета</b><span>Подписываем на месте. В договор вписывается конкретная дата монтажа, а не «в течение 10 дней».</span></span>
+        <span class="sched__dur">30 минут</span>
+      </div>
+      <div class="sched__row">
+        <span class="sched__when">Дни 1–2</span>
+        <span class="sched__what"><b>Раскрой на производстве</b><span>Полотно режется под ваш размер. Тканевое — на день дольше.</span></span>
+        <span class="sched__dur">2 рабочих дня</span>
+      </div>
+      <div class="sched__row">
+        <span class="sched__when">День 3</span>
+        <span class="sched__what"><b>Монтаж, комната до 20 м²</b><span>Одна бригада, один заход. Пыль собираем пылесосом по ходу работы.</span></span>
+        <span class="sched__dur">3–4 часа</span>
+      </div>
+      <div class="sched__row">
+        <span class="sched__when">День 3</span>
+        <span class="sched__what"><b>Монтаж, квартира до 60 м²</b><span>Две бригады параллельно, чтобы уложиться в один день и не приезжать снова.</span></span>
+        <span class="sched__dur">1 день</span>
+      </div>
+      <div class="sched__row">
+        <span class="sched__when">День 3</span>
+        <span class="sched__what"><b>Приёмка по чек-листу</b><span>Проходим 10 пунктов вместе с вами и подписываем акт. Гарантийный талон — на руки.</span></span>
+        <span class="sched__dur">15 минут</span>
+      </div>
+    </div>
+
+    <div class="penalty">
+      <span class="penalty__num">−1000 ₽</span>
+      <div>
+        <p><b>За каждые сутки просрочки монтажа</b> — вычитаем из итогового счёта. Считать начинаем со следующего дня после даты в договоре.</p>
+        <p>Исключения — только форс-мажор и ваш собственный перенос. Оба случая описаны в <a href="dogovor.html">пункте 4.3 договора</a>, и договор опубликован целиком.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== БРИГАДА ============================== -->
+<section class="band band--paper section" id="team">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Кто приедет</p>
+    <h2 class="section__title">В отзывах благодарят мастера, а не компанию</h2>
+    <p class="section__lead">
+      Так и есть: работу делает конкретный человек. Поэтому мы показываем бригаду
+      до заказа, а за сутки до монтажа присылаем, кто именно к вам едет.
+    </p>
+
+    <div class="team">
+      <article class="mate">
+        <div class="mate__ava" aria-hidden="true">АК</div>
+        <h3>Андрей Кулешов</h3>
+        <p class="mate__role">Бригадир · сложные узлы</p>
+        <div class="mate__stats">
+          <span class="mate__stat"><b>11</b><span>лет в монтаже</span></span>
+          <span class="mate__stat"><b>1 940</b><span>потолков</span></span>
+        </div>
+        <p class="mate__quote">Берёт объекты с теневым примыканием и световыми линиями — там, где ошибка в 2 мм видна с порога.</p>
+      </article>
+      <article class="mate">
+        <div class="mate__ava" aria-hidden="true">ШМ</div>
+        <h3>Шамиль Мурадов</h3>
+        <p class="mate__role">Монтажник · квартиры под ключ</p>
+        <div class="mate__stats">
+          <span class="mate__stat"><b>8</b><span>лет в монтаже</span></span>
+          <span class="mate__stat"><b>1 310</b><span>потолков</span></span>
+        </div>
+        <p class="mate__quote">Специализация — вся квартира за один день. Работает молча и быстро, за это его чаще всего и отмечают.</p>
+      </article>
+      <article class="mate">
+        <div class="mate__ava" aria-hidden="true">ЕП</div>
+        <h3>Евгений Пахомов</h3>
+        <p class="mate__role">Монтажник · санузлы и кухни</p>
+        <div class="mate__stats">
+          <span class="mate__stat"><b>6</b><span>лет в монтаже</span></span>
+          <span class="mate__stat"><b>870</b><span>потолков</span></span>
+        </div>
+        <p class="mate__quote">Обходы труб и коробов. Если труба нестандартная — скажет на замере, а не в день монтажа.</p>
+      </article>
+      <article class="mate">
+        <div class="mate__ava" aria-hidden="true">ИБ</div>
+        <h3>Ирина Белова</h3>
+        <p class="mate__role">Замерщик · расчёт сметы</p>
+        <div class="mate__stats">
+          <span class="mate__stat"><b>7</b><span>лет на замерах</span></span>
+          <span class="mate__stat"><b>3 400</b><span>замеров</span></span>
+        </div>
+        <p class="mate__quote">Считает смету при вас и объясняет каждую строку. Отговорит от лишнего, если оно вам не нужно.</p>
+      </article>
+    </div>
+
+    <div class="kit">
+      <h3>Что бригада привозит с собой</h3>
+      <p>Не «чистый монтаж» словами, а список, который можно проверить на пороге.</p>
+      <ul>
+        <li>Строительный пылесос — работает по ходу сверления, а не после</li>
+        <li>Сменная обувь и бахилы на всех членов бригады</li>
+        <li>Плёнка на мебель и пол, малярный скотч</li>
+        <li>Мешки под мусор — увозим с собой в тот же день</li>
+        <li>Свой инструмент и газовый баллон, заправленный заранее</li>
+        <li>Стремянка с мягкими опорами, чтобы не оставить следов</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== УЗЛЫ В РАЗРЕЗЕ ============================== -->
+<section class="band band--dark section" id="nodes">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Технология</p>
+    <h2 class="section__title">Узел в разрезе</h2>
+    <p class="section__lead">
+      Разница между потолками — не в фактуре, а в том, как полотно примыкает к стене.
+      Это видно на разрезе и невозможно понять по фотографии.
+    </p>
+
+    <div class="nodes">
+      <div class="nodes__tabs" role="tablist" aria-label="Типы примыкания">
+        <button class="node-tab is-active" role="tab" aria-selected="true" aria-controls="node-1" id="tab-1" data-node="1">
+          <b>Стандартный багет</b><small>от 150 ₽/п.м</small>
+        </button>
+        <button class="node-tab" role="tab" aria-selected="false" aria-controls="node-2" id="tab-2" data-node="2">
+          <b>Теневой профиль</b><small>зазор 8 мм · 690 ₽/п.м</small>
+        </button>
+        <button class="node-tab" role="tab" aria-selected="false" aria-controls="node-3" id="tab-3" data-node="3">
+          <b>Парящий потолок</b><small>LED по периметру</small>
+        </button>
+        <button class="node-tab" role="tab" aria-selected="false" aria-controls="node-4" id="tab-4" data-node="4">
+          <b>Световая линия</b><small>Line 30 · 2400 ₽/п.м</small>
+        </button>
+      </div>
+
+      <div class="node-stage">
+        <!-- Узел 1 -->
+        <div class="node-panel is-active" id="node-1" role="tabpanel" aria-labelledby="tab-1" data-node="1">
+          <svg viewBox="0 0 640 260" role="img" aria-label="Разрез: стандартный гарпунный багет, отступ от плиты 35 мм">
+            <defs>
+              <pattern id="h1" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+              </pattern>
+            </defs>
+            <rect x="70" y="30" width="520" height="34" fill="url(#h1)" stroke="rgba(255,255,255,.45)"/>
+            <text x="330" y="22" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="middle">плита перекрытия</text>
+            <rect x="70" y="64" width="34" height="180" fill="url(#h1)" stroke="rgba(255,255,255,.45)"/>
+            <text x="87" y="238" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="11" text-anchor="middle" transform="rotate(-90 87 238)">стена</text>
+            <path d="M104 99 h30 v10 h-9 l-6 12 h-15 z" fill="#3A4048" stroke="rgba(255,255,255,.6)" stroke-width="1.4"/>
+            <text x="150" y="96" fill="#ECEAE5" font-family="IBM Plex Mono, monospace" font-size="12">гарпунный багет</text>
+            <line x1="128" y1="115" x2="590" y2="115" stroke="#ECEAE5" stroke-width="2.5"/>
+            <text x="560" y="134" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="end">полотно ПВХ</text>
+            <path d="M116 121 q6 6 12 -6" fill="none" stroke="#FFD98A" stroke-width="2"/>
+            <text x="150" y="140" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="12">вставка-заглушка</text>
+            <line x1="620" y1="64" x2="620" y2="115" stroke="#FFD98A" stroke-width="1"/>
+            <line x1="612" y1="64" x2="628" y2="64" stroke="#FFD98A" stroke-width="1"/>
+            <line x1="612" y1="115" x2="628" y2="115" stroke="#FFD98A" stroke-width="1"/>
+            <text x="614" y="94" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="end">35 мм</text>
+          </svg>
+          <p class="node-panel__txt">
+            <b>Самый распространённый узел.</b> Полотно заводится в багет гарпуном, шов
+            закрывается вставкой-заглушкой. Съедает от потолка 35 мм. Стык со стеной виден
+            как тонкая линия — это нормально и это дешевле всего. Берут в три четверти заказов.
+          </p>
+        </div>
+
+        <!-- Узел 2 -->
+        <div class="node-panel" id="node-2" role="tabpanel" aria-labelledby="tab-2" data-node="2">
+          <svg viewBox="0 0 640 260" role="img" aria-label="Разрез: теневой профиль, зазор между стеной и полотном 8 мм">
+            <defs>
+              <pattern id="h2" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+              </pattern>
+            </defs>
+            <rect x="70" y="30" width="520" height="34" fill="url(#h2)" stroke="rgba(255,255,255,.45)"/>
+            <text x="330" y="22" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="middle">плита перекрытия</text>
+            <rect x="70" y="64" width="34" height="180" fill="url(#h2)" stroke="rgba(255,255,255,.45)"/>
+            <path d="M104 90 h44 v46 h-10 v-32 h-34 z" fill="#3A4048" stroke="rgba(255,255,255,.6)" stroke-width="1.4"/>
+            <text x="168" y="88" fill="#ECEAE5" font-family="IBM Plex Mono, monospace" font-size="12">теневой профиль</text>
+            <rect x="128" y="104" width="10" height="32" fill="#101215"/>
+            <line x1="138" y1="118" x2="590" y2="118" stroke="#ECEAE5" stroke-width="2.5"/>
+            <text x="560" y="137" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="end">полотно</text>
+            <line x1="128" y1="160" x2="128" y2="180" stroke="#FFD98A" stroke-width="1"/>
+            <line x1="138" y1="160" x2="138" y2="180" stroke="#FFD98A" stroke-width="1"/>
+            <line x1="118" y1="172" x2="148" y2="172" stroke="#FFD98A" stroke-width="1"/>
+            <text x="156" y="176" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="13">зазор 8 мм — тень вместо стыка</text>
+          </svg>
+          <p class="node-panel__txt">
+            <b>Потолок «висит» в воздухе.</b> Между стеной и полотном остаётся тёмный зазор
+            8 мм — глаз читает его как тень, а не как шов. Заглушка не нужна, кривизна стены
+            перестаёт быть заметной. Профиль дороже в четыре раза, зато узел не стареет
+            вместе с обоями.
+          </p>
+        </div>
+
+        <!-- Узел 3 -->
+        <div class="node-panel" id="node-3" role="tabpanel" aria-labelledby="tab-3" data-node="3">
+          <svg viewBox="0 0 640 260" role="img" aria-label="Разрез: парящий потолок со светодиодной лентой по периметру">
+            <defs>
+              <pattern id="h3" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+              </pattern>
+              <radialGradient id="g3" cx="0.15" cy="0.5" r="0.75">
+                <stop offset="0%" stop-color="#FFD98A" stop-opacity=".55"/>
+                <stop offset="100%" stop-color="#FFD98A" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="70" y="30" width="520" height="34" fill="url(#h3)" stroke="rgba(255,255,255,.45)"/>
+            <rect x="70" y="64" width="34" height="180" fill="url(#h3)" stroke="rgba(255,255,255,.45)"/>
+            <rect x="104" y="118" width="330" height="90" fill="url(#g3)"/>
+            <path d="M104 90 h46 v34 h-12 v-22 h-34 z" fill="#3A4048" stroke="rgba(255,255,255,.6)" stroke-width="1.4"/>
+            <rect x="126" y="104" width="12" height="6" fill="#FFD98A"/>
+            <text x="168" y="88" fill="#ECEAE5" font-family="IBM Plex Mono, monospace" font-size="12">профиль с полкой под ленту</text>
+            <text x="150" y="108" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="11">LED 12 В</text>
+            <line x1="138" y1="120" x2="590" y2="120" stroke="#ECEAE5" stroke-width="2.5"/>
+            <text x="560" y="139" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="end">полотно</text>
+            <path d="M112 132 l-14 26 M132 138 l-8 30 M152 142 l-2 32" stroke="#FFD98A" stroke-width="1" opacity=".65"/>
+            <text x="200" y="196" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="12">световая полоса на стене, 40–60 см</text>
+          </svg>
+          <p class="node-panel__txt">
+            <b>Свет уходит на стену, а не в глаза.</b> В полку профиля вкладывается лента,
+            она подсвечивает верх стены — потолок визуально отрывается от неё. Работает
+            только на ровной стене: любая волна станет видна в скользящем свете. Мы это
+            проверяем правилом на замере и говорим честно, если стена не годится.
+          </p>
+        </div>
+
+        <!-- Узел 4 -->
+        <div class="node-panel" id="node-4" role="tabpanel" aria-labelledby="tab-4" data-node="4">
+          <svg viewBox="0 0 640 260" role="img" aria-label="Разрез: световая линия шириной 30 мм между двумя полотнами">
+            <defs>
+              <pattern id="h4" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/>
+              </pattern>
+              <radialGradient id="g4" cx="0.5" cy="0.1" r="0.7">
+                <stop offset="0%" stop-color="#FFD98A" stop-opacity=".6"/>
+                <stop offset="100%" stop-color="#FFD98A" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="70" y="30" width="520" height="34" fill="url(#h4)" stroke="rgba(255,255,255,.45)"/>
+            <rect x="230" y="112" width="200" height="120" fill="url(#g4)"/>
+            <line x1="80" y1="118" x2="300" y2="118" stroke="#ECEAE5" stroke-width="2.5"/>
+            <line x1="360" y1="118" x2="580" y2="118" stroke="#ECEAE5" stroke-width="2.5"/>
+            <path d="M300 118 v-24 h60 v24" fill="#3A4048" stroke="rgba(255,255,255,.6)" stroke-width="1.4"/>
+            <rect x="312" y="98" width="36" height="7" fill="#FFD98A"/>
+            <rect x="302" y="114" width="56" height="5" fill="#FFF0CE" opacity=".9"/>
+            <text x="330" y="86" fill="#ECEAE5" font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="middle">короб профиля Line 30</text>
+            <text x="392" y="102" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="11">лента + рассеиватель</text>
+            <line x1="302" y1="150" x2="302" y2="170" stroke="#FFD98A" stroke-width="1"/>
+            <line x1="358" y1="150" x2="358" y2="170" stroke="#FFD98A" stroke-width="1"/>
+            <line x1="302" y1="162" x2="358" y2="162" stroke="#FFD98A" stroke-width="1"/>
+            <text x="330" y="184" fill="#FFD98A" font-family="IBM Plex Mono, monospace" font-size="13" text-anchor="middle">30 мм</text>
+            <text x="140" y="146" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12">полотно</text>
+            <text x="500" y="146" fill="#A2A7AE" font-family="IBM Plex Mono, monospace" font-size="12">полотно</text>
+          </svg>
+          <p class="node-panel__txt">
+            <b>Линия света прямо в плоскости потолка.</b> Полотно разрезается, в стык
+            встаёт короб с лентой и матовым рассеивателем. Ширина 30 или 50 мм. Линию
+            нельзя подвинуть после монтажа, поэтому её положение мы согласуем на замере
+            и рисуем на схеме, которую вы подписываете.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== РАБОТЫ ============================== -->
+<section class="band band--paper section" id="works">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Работы</p>
+    <h2 class="section__title">Каждая работа — с ценой и именем мастера</h2>
+    <p class="section__lead">
+      Не «портфолио», а спецификации выполненных объектов: что за полотно, какой профиль,
+      сколько заняло и сколько стоило. Цену объекта не публикует ни один конкурент в Москве.
+    </p>
+
+    <div class="works">
+      <article class="work">
+        <div class="work__vis">
+          <img src="images/rabota-spalnya.jpg" loading="lazy"
+               alt="Спальня с белым матовым натяжным потолком и встроенными точечными светильниками">
+          <span>Матовое · споты</span>
+        </div>
+        <div class="work__body">
+          <h3>Спальня 16 м², Северное Тушино</h3>
+          <dl class="work__spec">
+            <div><dt>Полотно</dt><dd>MSD Classic, матовое</dd></div>
+            <div><dt>Профиль</dt><dd>стандартный багет</dd></div>
+            <div><dt>Свет</dt><dd>6 спотов по периметру</dd></div>
+            <div><dt>Монтаж</dt><dd>3 ч 20 мин</dd></div>
+            <div><dt>Мастер</dt><dd>Шамиль Мурадов</dd></div>
+          </dl>
+          <div class="work__foot">
+            <span class="work__price">13 970 ₽<small>873 ₽ за м²</small></span>
+            <a href="#calc" class="btn btn--ink btn--sm">Хочу такой же</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work__vis">
+          <img src="images/rabota-kuhnya.jpg" loading="lazy"
+               alt="Кухня-гостиная с чёрным глянцевым натяжным потолком, отражающим окна и кухонный остров">
+          <span>Глянец · теневой профиль</span>
+        </div>
+        <div class="work__body">
+          <h3>Кухня-гостиная 24 м², Хорошёво</h3>
+          <dl class="work__spec">
+            <div><dt>Полотно</dt><dd>MSD Premium, чёрный глянец</dd></div>
+            <div><dt>Профиль</dt><dd>теневой, зазор 8 мм</dd></div>
+            <div><dt>Свет</dt><dd>8 спотов + подвесы над островом</dd></div>
+            <div><dt>Монтаж</dt><dd>1 день, 2 человека</dd></div>
+            <div><dt>Мастер</dt><dd>Андрей Кулешов</dd></div>
+          </dl>
+          <div class="work__foot">
+            <span class="work__price">33 880 ₽<small>1 412 ₽ за м²</small></span>
+            <a href="#calc" class="btn btn--ink btn--sm">Хочу такой же</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work__vis">
+          <img src="images/rabota-vannaya.jpg" loading="lazy"
+               alt="Санузел с белым натяжным потолком и точечными светильниками над двумя раковинами">
+          <span>Сатин · влажное помещение</span>
+        </div>
+        <div class="work__body">
+          <h3>Санузел 4,5 м², Бибирево</h3>
+          <dl class="work__spec">
+            <div><dt>Полотно</dt><dd>MSD Premium, сатин</dd></div>
+            <div><dt>Профиль</dt><dd>стандартный багет</dd></div>
+            <div><dt>Сложность</dt><dd>обход 2 труб, 4 спота</dd></div>
+            <div><dt>Монтаж</dt><dd>2 ч 10 мин</dd></div>
+            <div><dt>Мастер</dt><dd>Евгений Пахомов</dd></div>
+          </dl>
+          <div class="work__foot">
+            <span class="work__price">9 000 ₽<small>минимальный заказ</small></span>
+            <a href="#calc" class="btn btn--ink btn--sm">Хочу такой же</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work__vis">
+          <img src="images/rabota-mansarda.jpg" loading="lazy"
+               alt="Мансарда с белым тканевым натяжным потолком по скату и деревянной отделкой стен">
+          <span>Тканевое · мансарда</span>
+        </div>
+        <div class="work__body">
+          <h3>Мансарда 18 м², Апрелевка</h3>
+          <dl class="work__spec">
+            <div><dt>Полотно</dt><dd>D-Premium, тканевое</dd></div>
+            <div><dt>Профиль</dt><dd>стандартный багет по скату</dd></div>
+            <div><dt>Особенность</dt><dd>дом без отопления зимой</dd></div>
+            <div><dt>Монтаж</dt><dd>5 часов</dd></div>
+            <div><dt>Мастер</dt><dd>Андрей Кулешов</dd></div>
+          </dl>
+          <div class="work__foot">
+            <span class="work__price">26 880 ₽<small>1 493 ₽ за м²</small></span>
+            <a href="#calc" class="btn btn--ink btn--sm">Хочу такой же</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ПОЛОТНА ПО ЗАДАЧАМ ============================== -->
+<section class="band band--white section" id="tasks">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Выбор полотна</p>
+    <h2 class="section__title">Не по фактурам, а по задачам</h2>
+    <p class="section__lead">
+      «MSD Classic или Teqtum EURO» — вопрос не к вам. Скажите, какая у вас комната
+      и что вас беспокоит, а марку подберём мы.
+    </p>
+
+    <div class="tasks">
+      <article class="task">
+        <p class="task__q">Задача</p>
+        <h3>Ванная и санузел</h3>
+        <p>Пар, перепад температур, трубы под потолком. Плюс главный страх — что сверху зальют.</p>
+        <div class="task__pick"><b>Глянцевое ПВХ, MSD Premium</b><span>520 ₽/м² · держит до 100 л воды на м²</span></div>
+      </article>
+      <article class="task">
+        <p class="task__q">Задача</p>
+        <h3>Кухня с газовой плитой</h3>
+        <p>Жир оседает на потолке, над плитой — локальный нагрев. Матовое затрётся при мытье.</p>
+        <div class="task__pick"><b>Сатиновое ПВХ, MSD Premium</b><span>480 ₽/м² · моется без разводов</span></div>
+      </article>
+      <article class="task">
+        <p class="task__q">Задача</p>
+        <h3>Низкий потолок, 2,5 м</h3>
+        <p>Каждый сантиметр на счету, а стандартный багет съедает 35 мм и рисует линию по периметру.</p>
+        <div class="task__pick"><b>Глянец + теневой профиль</b><span>520 + 690 ₽/п.м · зеркалит и не режет объём</span></div>
+      </article>
+      <article class="task">
+        <p class="task__q">Задача</p>
+        <h3>Комната шире 3,5 м</h3>
+        <p>ПВХ-полотно такой ширины бывает только со швом. Шов виден в скользящем свете от окна.</p>
+        <div class="task__pick"><b>Тканевое D-Premium</b><span>1150 ₽/м² · бесшовно до 5 м</span></div>
+      </article>
+      <article class="task">
+        <p class="task__q">Задача</p>
+        <h3>Дача без отопления</h3>
+        <p>ПВХ при минусе дубеет и трескается. Зимой в неотапливаемом доме потолок может лопнуть.</p>
+        <div class="task__pick"><b>Тканевое D-Premium</b><span>1150 ₽/м² · держит до −40 °C</span></div>
+      </article>
+      <article class="task">
+        <p class="task__q">Задача</p>
+        <h3>Просто ровно и недорого</h3>
+        <p>Съёмная квартира, ремонт под сдачу, бюджет ограничен. Задача — закрыть плиту и забыть.</p>
+        <div class="task__pick"><b>Матовое MSD Classic</b><span>390 ₽/м² · три четверти наших заказов</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== КАК ПРОХОДИТ ЗАКАЗ ============================== -->
+<section class="band band--paper2 section" id="process">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Порядок работы</p>
+    <h2 class="section__title">Как проходит заказ</h2>
+
+    <div class="process">
+      <article class="stage">
+        <span class="stage__n">ЭТАП 1</span>
+        <h3>Заявка</h3>
+        <p>Выбираете дату и интервал замера сами. Перезваниваем подтвердить, дальше не звоним.</p>
+        <span class="stage__t">5 минут</span>
+      </article>
+      <article class="stage">
+        <span class="stage__n">ЭТАП 2</span>
+        <h3>Замер</h3>
+        <p>Ирина считает смету при вас, показывает образцы, отмечает на схеме положение линий и светильников.</p>
+        <span class="stage__t">40–60 минут</span>
+      </article>
+      <article class="stage">
+        <span class="stage__n">ЭТАП 3</span>
+        <h3>Договор</h3>
+        <p>Подписываем на месте вместе со сметой и схемой. Предоплата 30 %, дата монтажа — в тексте.</p>
+        <span class="stage__t">30 минут</span>
+      </article>
+      <article class="stage">
+        <span class="stage__n">ЭТАП 4</span>
+        <h3>Монтаж</h3>
+        <p>За сутки присылаем имя мастера. Приезжаем в назначенный день, работаем с пылесосом.</p>
+        <span class="stage__t">3 часа — 1 день</span>
+      </article>
+      <article class="stage">
+        <span class="stage__n">ЭТАП 5</span>
+        <h3>Приёмка</h3>
+        <p>Проходим чек-лист вместе, подписываем акт. Остаток оплачиваете только после этого.</p>
+        <span class="stage__t">15 минут</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ЧЕК-ЛИСТ ПРИЁМКИ ============================== -->
+<section class="band band--white section" id="checklist">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Приёмка</p>
+    <h2 class="section__title">Чек-лист, по которому вы принимаете работу</h2>
+    <p class="section__lead">
+      «Качественно» — не то слово, которое можно проверить. Эти десять пунктов — можно.
+      Мы отдаём чек-лист на бумаге вместе с актом.
+    </p>
+
+    <div class="checklist__wrap">
+      <ul class="checks">
+        <li>Полотно натянуто без волн и складок, в том числе в углах</li>
+        <li>Зазор по периметру ровный по всей длине, без просветов</li>
+        <li>Вставка-заглушка сидит плотно, нигде не выходит из паза</li>
+        <li>Углы обрезаны ровно, полотно не тянет и не морщит</li>
+        <li>Все светильники включаются, свет одной температуры</li>
+        <li>Закладные под люстру и споты не проступают через полотно</li>
+        <li>Обходы труб закрыты кольцами, без щелей</li>
+        <li>Стены, обои и плинтус не задеты инструментом и не оплавлены</li>
+        <li>На полу и мебели нет пыли и обрезков, плёнка снята</li>
+        <li>Мусор и упаковка вывезены, стремянка убрана</li>
+      </ul>
+      <aside class="checklist__aside">
+        <h3>Если пункт не выполнен</h3>
+        <p>Не подписывайте акт. Бригада устраняет на месте — это её работа, а не одолжение.</p>
+        <p>Если устранить на месте нельзя, в акте пишется замечание и срок. Дальше действует
+          <a href="garantiya.html">регламент рекламаций</a>: выезд в течение 48 часов.</p>
+        <p>Остаток суммы платится только после подписанного акта. Никаких «доплатите, а мы завтра приедем».</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ОТЗЫВЫ ============================== -->
+<section class="band band--paper section" id="reviews">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Отзывы</p>
+    <h2 class="section__title">Отвечаем на каждый, включая неудобные</h2>
+    <p class="section__lead">
+      Отзывы подтягиваются из карточки 2GIS как есть — вместе с четвёрками и нашими ответами.
+      Показывать только пятёрки бессмысленно: им давно никто не верит.
+    </p>
+
+    <div class="reviews">
+      <article class="review">
+        <div class="review__top">
+          <span class="review__who"><b>Марина К.</b><span class="review__meta">2GIS · 14 августа 2026 · мастер Шамиль</span></span>
+          <span class="review__stars" aria-label="5 из 5">★★★★★</span>
+        </div>
+        <p class="review__text">Смету посчитали при мне и распечатали. В день монтажа сумма совпала до рубля — я, честно, ждала подвоха. Шамиль приехал в 9:00, к часу всё было готово, пыль собирал пылесосом сразу.</p>
+        <div class="review__answer"><b>Ответ РОВНО</b>Спасибо, Марина. Совпадение сметы с итогом — не удача, а условие договора: разойтись она может только если задача изменилась.</div>
+      </article>
+
+      <article class="review">
+        <div class="review__top">
+          <span class="review__who"><b>Дмитрий Л.</b><span class="review__meta">2GIS · 2 августа 2026 · мастер Андрей</span></span>
+          <span class="review__stars" aria-label="4 из 5">★★★★☆</span>
+        </div>
+        <p class="review__text">Потолок отличный, световая линия ровная. Но раскрой задержали на день — позвонили сами, предупредили, вычли 1000 ₽. Осадок остался, хотя деньги вернули. Четвёрка за срыв, а не за работу.</p>
+        <div class="review__answer"><b>Ответ РОВНО</b>Справедливо. Задержал поставщик профиля, но это наша проблема, а не ваша. Неустойку начислили автоматически, без напоминания — так и должно работать.</div>
+      </article>
+
+      <article class="review">
+        <div class="review__top">
+          <span class="review__who"><b>Ольга П.</b><span class="review__meta">2GIS · 27 июля 2026 · замер Ирина</span></span>
+          <span class="review__stars" aria-label="5 из 5">★★★★★</span>
+        </div>
+        <p class="review__text">Хотела парящий потолок, Ирина приложила правило к стене и сказала: будет видна волна, свет её подчеркнёт. Отговорила от того, что дороже. Сделали теневой — выглядит дорого, а вышло дешевле.</p>
+        <div class="review__answer"><b>Ответ РОВНО</b>Ирина сделала ровно то, за что мы платим замерщикам: назвала риск до договора, а не после монтажа.</div>
+      </article>
+
+      <article class="review">
+        <div class="review__top">
+          <span class="review__who"><b>Сергей В.</b><span class="review__meta">2GIS · 11 июля 2026 · мастер Евгений</span></span>
+          <span class="review__stars" aria-label="5 из 5">★★★★★</span>
+        </div>
+        <p class="review__text">Ванная, две трубы, короб. Обход сделали аккуратно, колец не видно. Отдельно отмечу бахилы и плёнку — до этого ремонтники ходили по квартире в уличной обуви, для меня это больная тема.</p>
+        <div class="review__answer"><b>Ответ РОВНО</b>Сменная обувь и плёнка входят в стандарт выезда, их не нужно просить отдельно. Спасибо за отзыв.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="band band--white section" id="faq">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Вопросы</p>
+    <h2 class="section__title">Что спрашивают чаще всего</h2>
+
+    <div class="faq">
+      <details class="faq__item">
+        <summary>Сколько сантиметров съест потолок</summary>
+        <div class="faq__a"><p>Стандартный багет — 35 мм от плиты. Теневой профиль — 45 мм. Если ставим споты, отступ определяет высота светильника: обычно 60–80 мм. Точную цифру замерщик называет на месте и вписывает в смету.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Будет ли запах после монтажа</summary>
+        <div class="faq__a"><p>У ПВХ первые несколько часов есть слабый запах нагретого полотна — он уходит за сутки при проветривании. У тканевых полотен запаха нет вообще. Если запах держится дольше двух суток — это повод вызвать нас по гарантии.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Что будет, если соседи зальют</summary>
+        <div class="faq__a"><p>ПВХ-полотно удержит примерно 100 литров на квадратный метр и не порвётся. Не трогайте его сами и не прокалывайте: звоните нам, сливаем воду через отверстие под светильник и просушиваем. Выезд по такому случаю — в течение 48 часов, подробности в <a href="garantiya.html">регламенте</a>.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Можно ли мыть натяжной потолок</summary>
+        <div class="faq__a"><p>Да, мягкой тканью с мыльным раствором. Нельзя: абразивы, спиртосодержащие средства, щётки и швабры с жёстким краем. Глянец после мытья протирают насухо, иначе останутся разводы.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Сколько на самом деле занимает монтаж</summary>
+        <div class="faq__a"><p>Комната до 20 м² — 3–4 часа. Квартира до 60 м² — один день, но двумя бригадами. Всё, что сложнее (световые линии, несколько уровней, ниши под карниз), считается отдельно и вписывается в договор конкретной датой.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Полотно провиснет со временем</summary>
+        <div class="faq__a"><p>Правильно натянутое ПВХ не провисает — оно даёт усадку в первые сутки и дальше держит форму. Провисание означает либо ошибку натяжения, либо воду сверху. Первое — наш гарантийный случай на весь срок гарантии монтажа.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Есть ли минимальный заказ</summary>
+        <div class="faq__a"><p>Да, 9000 ₽. Выезд бригады с оборудованием и газовым баллоном дешевле не окупается. Мы говорим об этом сразу, а не после того, как вы прождали замерщика полдня.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Работаете ли вы за МКАД</summary>
+        <div class="faq__a"><p>До 30 км от МКАД — на тех же условиях. Дальше добавляется 35 ₽ за километр в одну сторону, эта строка появляется в смете до подписания.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ЗАПИСЬ НА ЗАМЕР ============================== -->
+<section class="band band--dark section" id="order">
+  <div class="container">
+    <p class="eyebrow eyebrow--mark">Замер</p>
+    <h2 class="section__title">Выберите день и удобный интервал</h2>
+    <p class="section__lead">Приедем в выбранное окно. Если опоздаем к вам на замер — замер и первый месяц гарантийного обслуживания за наш счёт.</p>
+
+    <div class="order__grid">
+      <form class="order__form" id="order-form" novalidate>
+        <div class="fields">
+          <div class="field">
+            <label for="name">Как к вам обращаться</label>
+            <input type="text" id="name" name="name" placeholder="Имя" autocomplete="name">
+            <span class="field__err" data-err="name"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+            <span class="field__err" data-err="phone"></span>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="field">
+            <label for="date">Дата замера</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="field">
+            <label for="slot">Интервал</label>
+            <select id="slot" name="slot">
+              <option value="9-12">09:00 — 12:00</option>
+              <option value="12-15">12:00 — 15:00</option>
+              <option value="15-18">15:00 — 18:00</option>
+              <option value="18-21">18:00 — 21:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="comment">Что нужно сделать</label>
+          <textarea id="comment" name="comment" placeholder="Например: спальня 16 м², хочу теневой профиль и 4 споты"></textarea>
+        </div>
+        <p class="order__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Мы не перезваниваем повторно, если вы отказались, — одного отказа достаточно.</p>
+        <button type="submit" class="btn btn--glow btn--wide">Записаться на замер</button>
+      </form>
+
+      <div class="success" id="order-success" hidden>
+        <h3>Заявка принята</h3>
+        <p>Перезвоним в течение 15 минут в рабочее время, чтобы подтвердить дату. За сутки до замера пришлём имя и фото специалиста, который приедет.</p>
+      </div>
+
+      <aside class="order__side">
+        <p class="order__promise"><b>Замер бесплатный, даже если вы откажетесь от заказа.</b> Смета остаётся у вас — можете сравнить её с любой другой.</p>
+        <ul class="contacts">
+          <li><span class="contacts__k">Телефон</span><a href="tel:+74951208410">+7 (495) 120-84-10</a></li>
+          <li><span class="contacts__k">WhatsApp и Telegram</span><a href="https://wa.me/74951208410">+7 (495) 120-84-10</a></li>
+          <li><span class="contacts__k">Почта</span><a href="mailto:zakaz@rovno-potolki.ru">zakaz@rovno-potolki.ru</a></li>
+          <li><span class="contacts__k">Шоурум</span><a href="#order">Москва, ул. Складочная, 1с18</a></li>
+          <li><span class="contacts__k">Часы работы</span><a href="#order">ежедневно 9:00 — 21:00</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== ПОДВАЛ ============================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="#hero" class="logo">
+          <span class="logo__mark">РОВНО</span>
+          <span class="logo__line" aria-hidden="true"></span>
+          <span class="logo__sub">натяжные потолки</span>
+        </a>
+        <p class="footer__about">Студия натяжных потолков. Москва и 30 км от МКАД. Дата монтажа фиксируется в договоре с 2014 года.</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="#calc">Смета</a></li>
+          <li><a href="#timing">Сроки и неустойка</a></li>
+          <li><a href="#team">Бригада</a></li>
+          <li><a href="#nodes">Узлы в разрезе</a></li>
+          <li><a href="#works">Работы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Документы</h4>
+        <ul>
+          <li><a href="dogovor.html">Договор целиком</a></li>
+          <li><a href="garantiya.html">Если что-то пошло не так</a></li>
+          <li><a href="#included">Что входит в цену</a></li>
+          <li><a href="#checklist">Чек-лист приёмки</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 РОВНО · ООО «Ровно Потолки», ИНН 7712345678</span>
+      <span class="footer__demo">Демонстрационный проект. Компания и цены вымышлены.</span>
+      <span class="footer__credits">Фото: Beydik1982, SPL&nbsp;Interiors, Spaceceiling, Basile&nbsp;Morin, Oleg&nbsp;Bor — Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license nofollow">CC&nbsp;BY-SA&nbsp;4.0</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/prices.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
