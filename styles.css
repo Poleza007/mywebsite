@@ -253,7 +253,6 @@ h1, h2, h3 { margin: 0; line-height: 1.1; }
 .work:hover { transform: translateY(-5px); border-color: rgba(199, 211, 79, 0.4); }
 .work__thumb { overflow: hidden; }
 .work__thumb img { width: 100%; aspect-ratio: 19 / 13; object-fit: cover; transition: transform 0.6s var(--ease); }
-.work__thumb--dark img { filter: grayscale(1) contrast(1.05) brightness(0.94); }
 .work:hover .work__thumb img { transform: scale(1.05); }
 .work__body { padding: 26px 28px 30px; }
 .work__tag {
