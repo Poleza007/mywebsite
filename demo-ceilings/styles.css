@@ -323,6 +323,9 @@ p { margin: 0 0 1rem; }
   border-right: 1px solid var(--line-hair);
 }
 .mech:last-child { border-right: 0; }
+/* Текст не должен упираться в разделитель: у линии одинаковый воздух с обеих сторон.
+   Первый блок остаётся заподлицо с контейнером — он выравнивается с заголовком выше. */
+.mech + .mech { padding-left: 1.5rem; }
 .mech__n {
   font-family: var(--f-mono); font-size: .68rem; color: var(--glow-deep);
   letter-spacing: .12em; display: block; margin-bottom: .5rem;
@@ -746,6 +749,7 @@ p { margin: 0 0 1rem; }
   .mechs { grid-template-columns: 1fr 1fr; }
   .mech:nth-child(2n) { border-right: 0; }
   .mech:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark-hair); }
+  .mech:nth-child(2n+1) { padding-left: 0; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -786,6 +790,7 @@ p { margin: 0 0 1rem; }
   .section { padding: 3rem 0; }
   .mechs { grid-template-columns: 1fr; }
   .mech { border-right: 0; border-bottom: 1px solid var(--line-dark-hair); padding-right: 0; }
+  .mech + .mech { padding-left: 0; }
   .mech:last-child { border-bottom: 0; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { width: 100%; }
